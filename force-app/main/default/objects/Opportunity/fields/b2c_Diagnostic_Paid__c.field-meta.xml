@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>b2c_Diagnostic_Paid__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>B2C South Africa only. Diagnostic sessions are paid services in South Africa.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>B2C South Africa only.</inlineHelpText>
+    <label>Diagnostic Paid</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
