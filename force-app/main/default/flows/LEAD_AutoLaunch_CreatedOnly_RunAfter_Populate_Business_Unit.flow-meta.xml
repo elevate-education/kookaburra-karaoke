@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Created_by_Mailshake</name>
+        <label>Created by Mailshake Integration user?</label>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Identify_the_owning_Business_Unit</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>integ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lead_Source_if_null</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Identify who the owning Business Unit should be based on the source</description>
+        <name>Identify_the_owning_Business_Unit</name>
+        <label>Identify the owning Business Unit</label>
+        <locationX>1106</locationX>
+        <locationY>731</locationY>
+        <defaultConnector>
+            <targetReference>Update_Business_Unit_to_Elevate_Australia</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Cura_Owned_Lead</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.cura_UserID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PBL</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Business_Unit_to_Cura</targetReference>
+            </connector>
+            <label>Cura Owned Lead</label>
+        </rules>
+        <rules>
+            <name>AUS_Owned_Lead</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Australia</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>integ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AUS</targetReference>
+            </connector>
+            <label>AUS Owned Lead</label>
+        </rules>
+        <rules>
+            <name>UK_Owned_Lead</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>UK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ukuser</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UK</targetReference>
+            </connector>
+            <label>UK Owned Lead</label>
+        </rules>
+        <rules>
+            <name>ZA_Owned_Lead</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>zauser</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SouthAfrica</targetReference>
+            </connector>
+            <label>ZA Owned Lead</label>
+        </rules>
+        <rules>
+            <name>NY_Owned_Lead</name>
+            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>NY</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ususer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>USA</targetReference>
+            </connector>
+            <label>NY Owned Lead</label>
+        </rules>
+        <rules>
+            <name>Created_by_AUS_B2C</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate Australia Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ElevateAustraliaCoaching</targetReference>
+            </connector>
+            <label>Created by AUS B2C</label>
+        </rules>
+        <rules>
+            <name>Created_by_UK_B2C</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate UK Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ElevateUKCoaching</targetReference>
+            </connector>
+            <label>Created by UK B2C</label>
+        </rules>
+        <rules>
+            <name>Created_by_ZA_B2C</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ElevateZACoaching</targetReference>
+            </connector>
+            <label>Created by ZA B2C</label>
+        </rules>
+    </decisions>
+    <description>Latest: Updated &apos;Created by Mailshake Integration User?&apos;and &apos;Identify the owning Business Unit&apos; to capture records created by Integration Users/ Delete Update Owner in Default Outcome
+Manually created B2C Leads assigned with corresponding BU. Excluded conditional trigger: Product Interest &lt;&gt; Coaching;
+Added filters across the board so that b2c Leads will not be addressed by this flow - including a conditional trigger: Product Interest &lt;&gt; Coaching (b2c Leads will be created via a separate Calendly flow).</description>
+    <environments>Default</environments>
+    <interviewLabel>LEAD AutoLaunch CreatedOnly RunAfter Populate Business Unit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>LEAD AutoLaunch CreatedOnly RunAfter Populate BU and Owner</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>AUS</name>
+        <label>Update Business Unit to Elevate Australia</label>
+        <locationX>314</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>Update_Owner_if_unassigned_to_Queue_yet</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate Australia</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>ElevateAustraliaCoaching</name>
+        <label>Update Business Unit to Elevate AUS Coaching</label>
+        <locationX>1370</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate Australia Coaching</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Product_Interest__c</field>
+            <value>
+                <stringValue>Coaching</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>ElevateUKCoaching</name>
+        <label>Update Business Unit to Elevate UK Coaching</label>
+        <locationX>1634</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate UK Coaching</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Product_Interest__c</field>
+            <value>
+                <stringValue>Coaching</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>ElevateZACoaching</name>
+        <label>Update Business Unit to Elevate ZA Coaching</label>
+        <locationX>1898</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate South Africa Coaching</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Product_Interest__c</field>
+            <value>
+                <stringValue>Coaching</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>SouthAfrica</name>
+        <label>Update Business Unit to Elevate South Africa</label>
+        <locationX>842</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>ZA_Update_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate South Africa</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Lead Record ID is stamped on field &apos;Lead Record ID&apos;. This will be mapped to Opportunity upon conversion and helps us identify the Opp created when a Lead is converted</description>
+        <name>Stamp_Lead_Record_ID</name>
+        <label>Stamp Lead Record ID</label>
+        <locationX>1106</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Created_by_Mailshake</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Lead_Record_ID__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UK</name>
+        <label>Update Business Unit to Elevate UK</label>
+        <locationX>578</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>UK_Update_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate UK</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>UK_Update_Owner</name>
+        <label>Update Owner if unassigned to Queue yet</label>
+        <locationX>578</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G6F000002k1IE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Business_Unit_to_Cura</name>
+        <label>Update Business Unit to Cura</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>Update_Company</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Cura</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Business_Unit_to_Elevate_Australia</name>
+        <label>Update Business Unit to Elevate Australia</label>
+        <locationX>2162</locationX>
+        <locationY>839</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Product_Interest__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Coaching</stringValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate Australia</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the standard LEAD.Company field with the name of the account in the custom LEAD.Account lookup field (which is populated by the Cura Platform)</description>
+        <name>Update_Company</name>
+        <label>Update Company</label>
+        <locationX>50</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>Company</field>
+            <value>
+                <elementReference>$Record.Account__r.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Lead_Source_if_null</name>
+        <label>Update Lead Source to Mailshake (if null)</label>
+        <locationX>974</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Identify_the_owning_Business_Unit</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>LeadSource</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>LeadSource</field>
+            <value>
+                <stringValue>Mailshake</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Owner_if_unassigned_to_Queue_yet</name>
+        <label>Update Owner if unassigned to Queue yet</label>
+        <locationX>314</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G6F000002k1IB</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>US_Update_Owner</name>
+        <label>Update Owner if unassigned to Queue yet</label>
+        <locationX>1106</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G6F000002k1IF</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>USA</name>
+        <label>Update Business Unit to Elevate USA</label>
+        <locationX>1106</locationX>
+        <locationY>839</locationY>
+        <connector>
+            <targetReference>US_Update_Owner</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Business_Unit__c</field>
+            <value>
+                <stringValue>Elevate USA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>ZA_Update_Owner</name>
+        <label>Update Owner if unassigned to Queue yet</label>
+        <locationX>842</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <stringValue>00G6F000002k1ID</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>980</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Stamp_Lead_Record_ID</targetReference>
+        </connector>
+        <object>Lead</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
