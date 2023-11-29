@@ -17,20 +17,29 @@
                 <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>integ</stringValue>
+                    <stringValue>einte</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
                 <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ukuser</stringValue>
+                </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
                 <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>zauser</stringValue>
+                </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
                 <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ususer</stringValue>
+                </rightValue>
             </conditions>
             <connector>
                 <targetReference>Update_Lead_Source_if_null</targetReference>
@@ -84,7 +93,7 @@
                 <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>integ</stringValue>
+                    <stringValue>einte</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -232,7 +241,7 @@
             <label>Created by ZA B2C</label>
         </rules>
     </decisions>
-    <description>Latest: Updated &apos;Created by Mailshake Integration User?&apos;and &apos;Identify the owning Business Unit&apos; to capture records created by Integration Users/ Delete Update Owner in Default Outcome
+    <description>Latest: Updated &apos;Created by Mailshake Integration User?&apos;and &apos;Identify the owning Business Unit&apos; to capture records created by Integration Users/ Delete Update Owner in Default Outcome - update alias from &quot;integ&quot; to &quot;einte&quot;
 Manually created B2C Leads assigned with corresponding BU. Excluded conditional trigger: Product Interest &lt;&gt; Coaching;
 Added filters across the board so that b2c Leads will not be addressed by this flow - including a conditional trigger: Product Interest &lt;&gt; Coaching (b2c Leads will be created via a separate Calendly flow).</description>
     <environments>Default</environments>
