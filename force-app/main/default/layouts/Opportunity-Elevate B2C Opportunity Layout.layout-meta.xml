@@ -186,6 +186,10 @@
                 <behavior>Edit</behavior>
                 <field>Diagnostic_Not_Run_Comments__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>b2c_Parent_keen_to_reschedule__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
