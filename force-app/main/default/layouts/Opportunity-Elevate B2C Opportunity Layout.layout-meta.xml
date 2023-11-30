@@ -532,6 +532,7 @@
         <fields>End_Date_Time_Display__c</fields>
         <fields>X_of_Students__c</fields>
         <fields>Year_Level__c</fields>
+        <fields>Description</fields>
         <fields>Sales_Price_Total_Price__c</fields>
         <fields>CreatedBy</fields>
         <relatedList>RelatedLineItemList</relatedList>
