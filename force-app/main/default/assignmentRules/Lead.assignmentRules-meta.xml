@@ -6,10 +6,15 @@
         <ruleEntry>
             <assignedTo>Elevate_Australia_Sales</assignedTo>
             <assignedToType>Queue</assignedToType>
-            <formula>AND(OR(TEXT(CountryCode) = &quot;AU&quot;, RIGHT(Email, 2) = &quot;AU&quot;),
-    OR( TEXT(Product_Interest__c) &lt;&gt; &quot;Coaching&quot;,
-        TEXT(Product_Interest__c) &lt;&gt; &quot;PBL&quot;
-    ))</formula>
+            <formula>OR(AND(
+    OR(TEXT(CountryCode) = &quot;AU&quot;, RIGHT(Email, 2) = &quot;AU&quot;),    
+    OR(TEXT(Product_Interest__c) &lt;&gt; &quot;Coaching&quot;,TEXT(Product_Interest__c) &lt;&gt; &quot;PBL&quot;)),
+
+AND(
+    ISPICKVAL(LeadSource, &quot;Mailshake&quot;),
+    CreatedBy.Alias = &quot;einte&quot;
+    )
+)</formula>
             <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
         </ruleEntry>
         <ruleEntry>
@@ -21,26 +26,38 @@
         <ruleEntry>
             <assignedTo>Elevate_South_Africa_Sales</assignedTo>
             <assignedToType>Queue</assignedToType>
-            <formula>AND(OR(TEXT(CountryCode)=&quot;ZA&quot;,RIGHT(Email, 2) = &quot;ZA&quot;),  
-    OR(TEXT(Product_Interest__c) &lt;&gt;&quot;Coaching&quot;,
-    TEXT(Product_Interest__c) &lt;&gt;&quot;PBL&quot;))</formula>
+            <formula>OR(AND(OR(TEXT(CountryCode)=&quot;ZA&quot;,RIGHT(Email, 2) = &quot;ZA&quot;),       OR(TEXT(Product_Interest__c) &lt;&gt;&quot;Coaching&quot;,     TEXT(Product_Interest__c) &lt;&gt;&quot;PBL&quot;))
+,
+
+AND(
+ISPICKVAL(LeadSource, &quot;Mailshake&quot;),
+CreatedBy.Alias = &quot;zauser&quot;
+)
+)</formula>
             <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
         </ruleEntry>
         <ruleEntry>
             <assignedTo>Elevate_UK_Sales</assignedTo>
             <assignedToType>Queue</assignedToType>
-            <formula>AND(OR(TEXT(CountryCode)=&quot;UK&quot;,RIGHT(Email, 2) = &quot;UK&quot;),  
-    OR(TEXT(Product_Interest__c) &lt;&gt;&quot;Coaching&quot;,
-    TEXT(Product_Interest__c) &lt;&gt;&quot;PBL&quot;))</formula>
+            <formula>OR(AND(OR(TEXT(CountryCode)=&quot;UK&quot;,RIGHT(Email, 2) = &quot;UK&quot;),       OR(TEXT(Product_Interest__c) &lt;&gt;&quot;Coaching&quot;,     TEXT(Product_Interest__c) &lt;&gt;&quot;PBL&quot;)),
+
+AND(
+ISPICKVAL(LeadSource, &quot;Mailshake&quot;),
+CreatedBy.Alias = &quot;ukuser&quot;
+)
+)</formula>
             <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
         </ruleEntry>
         <ruleEntry>
             <assignedTo>Elevate_NY_Sales</assignedTo>
             <assignedToType>Queue</assignedToType>
-            <formula>AND(
-    TEXT(CountryCode)=&quot;US&quot;,
-    TEXT(Product_Interest__c) &lt;&gt;&quot;Coaching&quot;,
-    TEXT(Product_Interest__c) &lt;&gt;&quot;PBL&quot;)</formula>
+            <formula>OR(AND(     TEXT(CountryCode)=&quot;US&quot;,     TEXT(Product_Interest__c) &lt;&gt;&quot;Coaching&quot;,     TEXT(Product_Interest__c) &lt;&gt;&quot;PBL&quot;),
+
+AND(
+ISPICKVAL(LeadSource, &quot;Mailshake&quot;),
+CreatedBy.Alias = &quot;ususer&quot;
+)
+)</formula>
             <template>unfiled$public/LeadsNewassignmentnotificationSAMPLE</template>
         </ruleEntry>
     </assignmentRule>
