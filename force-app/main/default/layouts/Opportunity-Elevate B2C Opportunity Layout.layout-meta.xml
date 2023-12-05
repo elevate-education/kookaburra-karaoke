@@ -379,6 +379,10 @@
                 <behavior>Readonly</behavior>
                 <field>CoachHandover_ReadOnly_b2c__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>b2c_Student_Feedback_Form_Link__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
