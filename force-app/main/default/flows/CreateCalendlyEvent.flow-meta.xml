@@ -877,6 +877,13 @@ So there&apos;s no path forward if the profile is not found.</description>
                     <stringValue>molly.mcgeachin@elevateeducation.com</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventPrimaryPublisherEmail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>olivia@elevateeducation.com</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Find_B2C_Owner_UK</targetReference>
             </connector>
