@@ -1191,7 +1191,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse1__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse2__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1219,6 +1219,12 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MobilePhone</field>
+            <value>
+                <elementReference>$Record.Calendly__CustomResponse1__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>OwnerId</field>
             <value>
                 <elementReference>LeadOwnerId</elementReference>
@@ -1239,7 +1245,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Student_s_School_b2c__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse3__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse4__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1251,7 +1257,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Year_Level__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse2__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse3__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
