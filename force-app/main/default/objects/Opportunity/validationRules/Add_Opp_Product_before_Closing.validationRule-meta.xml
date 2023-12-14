@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Opp_Product_before_Closing</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISNEW()),
+    ISPICKVAL(StageName, &quot;Closed Won&quot;),
+    Has_Opportunity_Products__c = 0
+)</errorConditionFormula>
+    <errorMessage>Please add at least one Opportunity Product before saving as Closed Won</errorMessage>
+</ValidationRule>
