@@ -8,31 +8,7 @@ global class GenericCuraEventProcessor implements ICuraEventProcessor {
 
         List<SObject> records = new List<SObject>();
         List<Apex_Log_Entry__c> ales = new List<Apex_Log_Entry__c>();
-        
-        //get existing records, for addition type
-        //Set<String> externalIds = new Set<String>();/
-        //Set<String> queryFields = new Set<String>();
 
-        /*for(Object i :incomingEvents) { 
-            CuraMappingUtils.ExistingFieldsQuery result = CuraMappingUtils.getIdForExisting(mapping, (Map<String, Object>)i);
-            externalIds.add(result.recordExternalId);
-            queryFields.addAll(result.queryFields);
-        }
-        
-        Map<String, SObject> existingRecords = new Map<String, SObject>();
-        if(!externalIds?.isEmpty() && !queryFields?.isEmpty()) {
-            
-            String query = 'SELECT ID, ' + mapping.externalIDFieldName + ', ' + String.join(new List<String>(queryFields),',').substringBeforeLast(',');
-            query += ' FROM ' + mapping.sObjectName + ' WHERE ' + mapping.externalIDFieldName;
-            query += ' IN (' + String.join(new List<String>(externalIds),',').substringBeforeLast(',') + ')';            
-            List<SObject> existing = Database.query(query);
-            for(SObject r :existing) {
-                existingRecords.put(
-                	(String) r.get(mapping.externalIDFieldName),
-                    r
-                );
-            }   
-        }*/
         for(Object i :incomingEvents) {
 
             Map<String, Object> logData = new Map<String, Object>();
