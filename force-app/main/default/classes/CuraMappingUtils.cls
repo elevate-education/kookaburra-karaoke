@@ -18,6 +18,10 @@ public class CuraMappingUtils {
         else if(info.dataType == 'DateTime') {
             return JSON.deserialize(JSON.serialize(value), Datetime.class);
         }
+        else if(info.dataType == 'DateTimeToDate') {
+            DateTime temp = (DateTime)JSON.deserialize(JSON.serialize(value), Datetime.class);
+            return temp.date();
+        }
         else if(info.dataType == 'RecordType') {
             DescribeSObjectResult objDescribe = Schema.getGlobalDescribe().get(sObjectType).getDescribe();
             Map<String,Schema.RecordTypeInfo> rtMapByName = objDescribe.getRecordTypeInfosByDeveloperName();
