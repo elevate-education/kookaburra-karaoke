@@ -175,17 +175,17 @@ global class CuraMappingsV2 {
                         new FieldInfo('RecordTypeId', 'RecordType', 'Cura'),
                         new FieldInfo('Business_Unit__c', 'String', 'Cura'),
                         new FieldInfo('Status__c', 'String', 'New Booking'),
-                        new FieldInfo('Name', 'String', 'Cura Booking')
+                        new FieldInfo('Product_Family__c', 'String', 'PBL')
                         },
                 'CuraBookingEventProcessor'
             ),
-            'BOOKING_TEACHER_EXPLORED' => new CuraEventFieldMap(
+            'BOOKING_TEACHER_EXPLORE' => new CuraEventFieldMap(
                 'Booking__c',
                 'cura_subscription_id__c',
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_user_id__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime')
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime')
                         },
                 new List<FieldInfo>{new FieldInfo('cura_Teacher_Explored__c', 'Boolean', true)},
                 'GenericCuraEventProcessor'
@@ -195,7 +195,7 @@ global class CuraMappingsV2 {
                 'cura_subscription_id__c',
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
-                        'created_at' => new FieldInfo('cura_Logged_In_Time__c', 'DateTime')
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime')
                         },
                 null,
                 'GenericCuraEventProcessor'
@@ -206,8 +206,7 @@ global class CuraMappingsV2 {
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_User_ID__c', 'String'),
-                        'subject' => new FieldInfo('cura_Teacher_Subject__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime')
+                        'subject' => new FieldInfo('cura_Teacher_Subject__c', 'String')
                         },
                 null,
                 'GenericCuraEventProcessor'
@@ -218,7 +217,7 @@ global class CuraMappingsV2 {
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_User_ID__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime')
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime')
                         },
                 new List<FieldInfo>{new FieldInfo('cura_Classroom_Created__c', 'Boolean', true)},
                 'GenericCuraEventProcessor'
@@ -229,7 +228,7 @@ global class CuraMappingsV2 {
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_User_ID__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime')
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime')
                         },
                 new List<FieldInfo>{new FieldInfo('cura_Teacher_Use_Classroom__c', 'Boolean', true)},
                 'GenericCuraEventProcessor'
@@ -240,7 +239,7 @@ global class CuraMappingsV2 {
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_User_ID__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime'),
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime'),
                         'quantity' => new FieldInfo('cura_Students_added__c', 'Number')
                         },
                 null,
@@ -252,8 +251,8 @@ global class CuraMappingsV2 {
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_User_ID__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime'),
-                        'quantity' => new FieldInfo('cura_Students_added__c', 'Number')
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime'),
+                        'quantity' => new FieldInfo('cura_Student_Work_Submitted__c', 'Number')
                         },
                 null,
                 'GenericCuraEventProcessor'
@@ -264,7 +263,7 @@ global class CuraMappingsV2 {
                 new Map<String, FieldInfo>{
                     'cura_subscription_id' => new FieldInfo('cura_subscription_id__c', 'String'),
                         'cura_user_id' => new FieldInfo('cura_User_ID__c', 'String'),
-                        'created_at' => new FieldInfo('cura_End_Time__c', 'DateTime')
+                        'created_at' => new FieldInfo('Cura_Logged_In_Time__c', 'DateTime')
                         },
                 new List<FieldInfo>{
                     new FieldInfo('cura_Booking_Cancelled__c', 'Boolean', true),
