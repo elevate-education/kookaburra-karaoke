@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IF_Meeting_Call_Cancelled_Checked</fullName>
+    <active>true</active>
+    <description>IF Meeting/Call Cancelled is checked THEN Meeting Cancellation Reason &amp;&amp; Meeting Reschedule Status Not Null. Applied to Elevate B2B New Sales (record type)</description>
+    <errorConditionFormula>AND
+( 
+/*Elevate B2B New Sales record type*/
+RecordType.DeveloperName = &quot;Seminar&quot;, 
+IF
+( Meeting_Call_Cancelled__c = True,
+ISPICKVAL( Meeting_Cancellation_Reason__c, &apos;&apos; ) || ISPICKVAL( Meeting_Reschedule_status__c, &apos;&apos;), false)
+)</errorConditionFormula>
+    <errorMessage>Meeting Cancellation Reason and Meeting Reschedule Status should not be blank.</errorMessage>
+</ValidationRule>
