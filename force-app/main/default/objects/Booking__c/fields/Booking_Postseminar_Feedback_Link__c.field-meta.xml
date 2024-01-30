@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Postseminar_Feedback_Link__c</fullName>
+    <description>This field is not used. Replaced by new 1-10 rating link field &quot;Debrief link (1-10)&quot;</description>
+    <externalId>false</externalId>
+    <formula>$Setup.Elevate_Org_Settings__c.Booking_Site_Base_URL__c + &apos;/SeminarFeedback?id=&apos; +  Encrypted_Id__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This field is not used. Replaced by new 1-10 rating link field &quot;Debrief link (1-10)&quot;</inlineHelpText>
+    <label>X_ARCHIVED_Booking Workshop Feedback</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
