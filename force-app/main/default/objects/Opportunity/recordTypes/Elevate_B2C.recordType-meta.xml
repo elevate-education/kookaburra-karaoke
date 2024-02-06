@@ -289,6 +289,48 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Meeting_Cancellation_Reason__c</picklist>
+        <values>
+            <fullName>Budget</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Reschedule_status__c</picklist>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reach Out Later</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Mid_Debrief_Mode_b2c__c</picklist>
         <values>
             <fullName>Email</fullName>
@@ -640,6 +682,10 @@
     </picklistValues>
     <picklistValues>
         <picklist>Type</picklist>
+        <values>
+            <fullName>RMHC</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Standard</fullName>
             <default>true</default>
