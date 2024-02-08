@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elevate B2C %28Coaching%29</fullName>
+    <description>Elevate B2C sales process for Coaching</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Diagnostic Booked</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Diagnostic Done</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Diagnostic Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Diagnostic Requested</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Payment Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Scheduled</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Suspended</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

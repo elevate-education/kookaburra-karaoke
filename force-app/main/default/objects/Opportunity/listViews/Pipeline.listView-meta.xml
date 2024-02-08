@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Billing_Contact__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Total_New_Sales__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>New,Program Sent,Meeting Booked,Call/Meeting Booked,Qualification,Drafting Proposal,Internal Review,Program Revision,Quote Sent,Pending Award,Quote Accepted,Suspended</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>equals</operation>
+        <value>lucy hammond</value>
+    </filters>
+    <label>AE Pipeline</label>
+    <sharedTo>
+        <role>AU_BDM</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Accepted</fullName>
+    <active>true</active>
+    <description>Quote Accepted Opps need an Address (includiing country) &amp; Job Region populated on the Account record</description>
+    <errorConditionFormula>AND(
+
+TEXT(Business_Unit_2__c) &lt;&gt; &quot;Cura&quot;,
+TEXT(StageName) = &quot;Quote Accepted&quot;,
+RecordType.DeveloperName &lt;&gt; &quot;Target&quot;,
+
+OR(
+ISBLANK(Account.Job_Assignment_Region__c), 
+ISBLANK(Account.ShippingAddress),
+ISBLANK(Account.ShippingCountry)
+)
+)</errorConditionFormula>
+    <errorMessage>Please populate an Address (with Country) AND Job Region on the related &apos;Account&apos;.</errorMessage>
+</ValidationRule>

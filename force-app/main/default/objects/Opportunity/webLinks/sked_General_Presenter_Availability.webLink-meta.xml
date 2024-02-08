@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sked_General_Presenter_Availability</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>General Presenter Availability</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/js/functions.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/resource/skedscripts/js/jquery-1.8.2.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/resource/skedscripts/ui/jquery-ui.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/resource/skedscripts/js/jquery.ba-postmessage.js&apos;)} 
+{!REQUIRESCRIPT(&apos;/resource/skedscripts/js/jquery.ba-bbq.js&apos;)} 
+
+requireCssFile(&apos;/resource/skedscripts/ui/jquery-ui.css&apos;); 
+requireCssFile(&apos;/resource/skedScripts/ui/dialog.min.css&apos;); 
+
+function requireCssFile(filename) { 
+var fileref = document.createElement(&apos;link&apos;); 
+fileref.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;); 
+fileref.setAttribute(&apos;type&apos;, &apos;text/css&apos;); 
+fileref.setAttribute(&apos;href&apos;, filename); 
+document.getElementsByTagName(&apos;head&apos;)[0].appendChild(fileref); 
+} 
+
+
+var j$ = jQuery.noConflict(); 
+var count = 1; 
+var iframe_url = &apos;{!URLFOR(&apos;/apex/skedBookingModal&apos;)}&apos;; 
+var child_domain = iframe_url.substring(0, iframe_url.indexOf(&apos;/&apos;, 9)); 
+var parent_domain = window.location.protocol + &apos;//&apos; + window.location.host; 
+var j$modalDialog = j$(&apos;&lt;div&gt;&lt;/div&gt;&apos;) 
+.html(&apos;&lt;iframe id=&quot;iframeContentId&quot; src=&quot;&apos; + iframe_url + &apos;?parent_domain=&apos; + parent_domain + &apos;&amp;bookingId={!Opportunity.Id}&amp;bookingDate={!Opportunity.CloseDate}&quot; frameborder=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; scrolling=&quot;true&quot; /&gt;&apos;) 
+.dialog({ 
+autoOpen: false, 
+title: &apos;Job Management&apos;, 
+resizable: false, 
+width: j$(window).width()-80, 
+height: j$(window).height()-260, 
+minWidth: 1024, 
+maxWidth: 1600, 
+autoResize: true, 
+modal: true, 
+draggable: true, 
+dialogClass: &apos;dialog1&apos;, 
+open: function (event, ui) { 
+j$(this).css(&apos;overflow&apos;, &apos;hidden&apos;); //this line does the actual hiding 
+}, 
+close: function () { 
+window.location.reload(); 
+} 
+}); 
+
+// Here &quot;addEventListener&quot; is for standards-compliant web browsers and &quot;attachEvent&quot; is for IE Browsers. 
+var eventMethod = window.addEventListener ? &quot;addEventListener&quot; : &quot;attachEvent&quot;; 
+var eventer = window[eventMethod]; 
+
+// Now... 
+// if 
+// &quot;attachEvent&quot;, then we need to select &quot;onmessage&quot; as the event. 
+// if 
+// &quot;addEventListener&quot;, then we need to select &quot;message&quot; as the event 
+
+var messageEvent = eventMethod == &quot;attachEvent&quot; ? &quot;onmessage&quot; : &quot;message&quot;; 
+
+// Listen to message from child IFrame window 
+eventer(messageEvent, function (e) { 
+//window.open(&apos;/&apos;+e.data.split(&apos;=&apos;)[1],&quot;_BLANK&quot;); 
+
+j$modalDialog.dialog(&apos;close&apos;); 
+window.location.reload(); 
+
+// Do whatever you want to do with the data got from IFrame in Parent form. 
+}, false); 
+
+j$modalDialog.dialog(&apos;open&apos;);</url>
+</WebLink>

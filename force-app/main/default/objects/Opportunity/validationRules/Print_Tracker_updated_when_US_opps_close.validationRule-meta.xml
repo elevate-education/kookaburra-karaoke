@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Print_Tracker_updated_when_US_opps_close</fullName>
+    <active>true</active>
+    <description>Print tracker to be updated when US opps are closed won</description>
+    <errorConditionFormula>Business_Unit__c  = &apos;Elevate USA&apos; &amp;&amp; IsClosed &amp;&amp; IsWon &amp;&amp;   RecordType.DeveloperName &lt;&gt; &apos;Target&apos; &amp;&amp; Print_Tracker__c = false &amp;&amp; $User.Profile_Name__c &lt;&gt; &apos;System Administrator&apos;</errorConditionFormula>
+    <errorDisplayField>Print_Tracker__c</errorDisplayField>
+    <errorMessage>Have you forgotten the print tracker? Please make sure the tracker is updated, and then close-win the Opp.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cura_Test_Trial_Opps</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Campaign_Name__c</columns>
+    <columns>Primary_Contact__c</columns>
+    <columns>cura_Teachers_Added__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Next_Activity_Date__c</columns>
+    <columns>Meeting_Booked__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.NAME</field>
+        <operation>contains</operation>
+        <value>Cura</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>greaterThan</operation>
+        <value>2/1/2023</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Seminar,Opportunity.Seminar_Re_Sign</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Lost</value>
+    </filters>
+    <label>Cura Trial Opps</label>
+    <sharedTo>
+        <roleAndSubordinates>Cura_HQ</roleAndSubordinates>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposit_Invoices_PBL_SG</fullName>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Primary_Contact__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Grand_Total_Exc_Tax__c</columns>
+    <columns>Grand_Total_Inc_Tax__c</columns>
+    <columns>Deposit_Invoice_Sent__c</columns>
+    <columns>Invoice_Number_Deposit__c</columns>
+    <columns>Invoice_Date_Deposit__c</columns>
+    <columns>Booking_Details_Link__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <filters>
+        <field>Deposit_Invoice_Sent__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/27/2021</value>
+    </filters>
+    <filters>
+        <field>Business_Unit__c</field>
+        <operation>equals</operation>
+        <value>Elevate Singapore</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Seminar,Opportunity.Seminar_Re_Sign</value>
+    </filters>
+    <filters>
+        <field>PBL_Opp__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Required_Deposit__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Deposit Invoices - PBL (SG)</label>
+    <sharedTo>
+        <group>All_SBU_Office_Staff</group>
+        <group>Singapore_Admin</group>
+    </sharedTo>
+</ListView>

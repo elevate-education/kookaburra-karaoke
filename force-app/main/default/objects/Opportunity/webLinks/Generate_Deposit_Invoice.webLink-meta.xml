@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Deposit_Invoice</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Generate Deposit Invoice</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/InvoiceGenerator?type=deposit&amp;id={!Opportunity.Id}&amp;sessionId={!API.Session_ID}&amp;serverUrl={!API.Partner_Server_URL_290}&amp;templateid=a0I6F00000fq2Or&amp;SC0=1&amp;SC1=Attachments</url>
+</WebLink>

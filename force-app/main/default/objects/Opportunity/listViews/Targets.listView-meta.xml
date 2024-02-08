@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Targets</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Target</value>
+    </filters>
+    <label>SBU Targets</label>
+    <sharedTo>
+        <role>Elevate_Australia_General_Manager</role>
+        <role>Elevate_NorCal_General_Manager</role>
+        <role>Elevate_Services</role>
+        <role>Elevate_Singapore_General_Manager</role>
+        <role>Elevate_South_Africa_General_Manager</role>
+        <role>Elevate_UK_General_Manager</role>
+        <role>Elevate_USA_General_Manager</role>
+    </sharedTo>
+</ListView>

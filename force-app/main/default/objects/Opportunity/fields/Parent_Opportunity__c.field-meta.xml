@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>B2C only. Used to house Corporate account opps under one Parent opp for Sales reporting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>B2C only. Used to house Corporate account opps under one Parent opp for Sales reporting</inlineHelpText>
+    <label>Parent Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Opportunities (Parent Opportunity)</relationshipLabel>
+    <relationshipName>Child_Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

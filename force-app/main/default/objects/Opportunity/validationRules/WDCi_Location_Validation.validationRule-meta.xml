@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WDCi_Location_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK(Location__r.sked__Account__c)) &amp;&amp; Location__r.sked__Account__c !=  AccountId</errorConditionFormula>
+    <errorDisplayField>Location__c</errorDisplayField>
+    <errorMessage>The location must be from the same school.</errorMessage>
+</ValidationRule>

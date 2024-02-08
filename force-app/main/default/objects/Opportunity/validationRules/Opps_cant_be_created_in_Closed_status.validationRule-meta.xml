@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opps_cant_be_created_in_Closed_status</fullName>
+    <active>true</active>
+    <description>Opps can&apos;t be created in Closed status as Bookings/Jobs won&apos;t be correctly created with Product Lines</description>
+    <errorConditionFormula>AND (
+ISNEW(),
+TEXT(StageName) = &quot;Closed Won&quot;
+)</errorConditionFormula>
+    <errorMessage>An Opportunity can&apos;t be created in the &apos;Closed Won&apos; stage. Add Products and then set the stage to Closed Won.</errorMessage>
+</ValidationRule>
