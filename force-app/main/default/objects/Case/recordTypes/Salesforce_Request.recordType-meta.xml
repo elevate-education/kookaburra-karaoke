@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce_Request</fullName>
+    <active>true</active>
+    <businessProcess>Salesforce Support Process</businessProcess>
+    <compactLayoutAssignment>Salesforce_Request_CL</compactLayoutAssignment>
+    <description>For all internal tech support requests</description>
+    <label>Tech Request (Internal)</label>
+    <picklistValues>
+        <picklist>Application__c</picklist>
+        <values>
+            <fullName>Conga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FormAssembly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pardot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seismic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SharePoint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skedulo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website%2FDomain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Impact__c</picklist>
+        <values>
+            <fullName>Critical - Application is down for ALL USERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High - Serious degradation of application performance or functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low - Issue or Question with limited business impact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal - Application issue that has moderate impact to the business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Business_Unit__c</picklist>
+        <values>
+            <fullName>Cura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Australia Coaching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate South Africa Coaching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate UK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate UK Coaching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cause_Category__c</picklist>
+        <values>
+            <fullName>Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conduct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Governance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Illness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Language</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MentalHealth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RecurringIllness</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Testing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Travel</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Complainant_Position__c</picklist>
+        <values>
+            <fullName>Connect Presenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Skills Coach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Skills Presenter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Formal_Informal__c</picklist>
+        <values>
+            <fullName>Formal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Function__c</picklist>
+        <values>
+            <fullName>Client Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coaching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grade__c</picklist>
+        <values>
+            <fullName>10th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10th and 11th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11th and 12th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5th and 6th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6th and 7th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6th%2C 7th and 8th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7th and 8th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8th and 9th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9th Grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9th and 10th Grade</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intake_Method__c</picklist>
+        <values>
+            <fullName>Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webform</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Outcome__c</picklist>
+        <values>
+            <fullName>Coach swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount applied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Downgrade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-financial remediation action%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund applied</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Level 1 - Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 2 - Urgent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 3 - High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Level 4 - Medium</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Line__c</picklist>
+        <values>
+            <fullName>B2B Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B Cura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2B Study Skills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2C Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2C Study Skills %28Coaching%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Application Defect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Device setup%2Fissue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enhancement Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Offboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Access</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Seminar__c</picklist>
+        <values>
+            <fullName>AP Day 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP Day 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AP Day 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ace Your Exams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Close Reading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Challenge - Writing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Challenge Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finishing Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junior Time Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memory Mnemonics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Seminars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Note Taking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parent Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Elevation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Sensei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Skills Kick Start</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bridge 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bridge 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bridge 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Summer Bridge 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Seminar_del__c</picklist>
+        <values>
+            <fullName>1%2E Close Reading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%2E AP Day 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%2E Parent Night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%2E Summer Bridge 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13%2E Summer Bridge 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14%2E Summer Bridge 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2E Summer Bridge 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2E Multiple Seminars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E Note Taking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E Time Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E Student Elevation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2E Memory Mnemonics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%2E Ace Your Exams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E Faculty PD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%2E AP Day 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%2E AP Day 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ace Your Exams</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Challenge - Writing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Elevate Challenge Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finishing Line</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Junior Time Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Memory Mnemonics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Student Elevation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Sensei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Study Skills Kick Start</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Reason__c</picklist>
+        <values>
+            <fullName>Tech bug</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Tech Support</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>
