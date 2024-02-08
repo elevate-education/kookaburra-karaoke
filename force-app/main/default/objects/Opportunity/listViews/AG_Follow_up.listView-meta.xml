@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AG_Follow_up</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Meeting_Booked__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>agall</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Seminar,Opportunity.Seminar_Re_Sign</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Meeting Booked,Quote Sent,Quote Accepted</value>
+    </filters>
+    <filters>
+        <field>Meeting_Call_Cancelled__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Meeting_Booked__c</field>
+        <operation>lessOrEqual</operation>
+        <value>6/19/2023</value>
+    </filters>
+    <filters>
+        <field>Campaign_Name__c</field>
+        <operation>contains</operation>
+        <value>Study Skills</value>
+    </filters>
+    <filters>
+        <field>Meeting_Booked__c</field>
+        <operation>greaterThan</operation>
+        <value>4/1/2023</value>
+    </filters>
+    <label>AG Follow-up</label>
+</ListView>

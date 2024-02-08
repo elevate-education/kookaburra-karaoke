@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Booking_Details</fullName>
+    <availability>online</availability>
+    <description>WDCi: This is to send booking details email</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Send Booking Details</masterLabel>
+    <openType>sidebar</openType>
+    <page>OpportunitySendBookingDetail</page>
+    <protected>false</protected>
+</WebLink>

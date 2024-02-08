@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Re_sign_Initial</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Primary_Contact__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Trigger_Program_Re_sign__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Name__c</field>
+        <operation>equals</operation>
+        <value>2021 AUS Re-sign Campaign</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Resign</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>New</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Seminar_Re_Sign</value>
+    </filters>
+    <filters>
+        <field>State_Relevant_CSM__c</field>
+        <operation>equals</operation>
+        <value>Annika Clayton</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>aclay</value>
+    </filters>
+    <label>Email - Re-sign Initial</label>
+    <sharedTo>
+        <role>AU_CSM</role>
+        <role>Elevate_Australia_General_Manager</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2C_UK_Pipeline</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>b2c_Diagnostic_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Elevate_B2C</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Won,Closed Lost</value>
+    </filters>
+    <label>B2C UK Pipeline</label>
+    <sharedTo>
+        <role>Elevate_UK_General_Manager</role>
+        <roleAndSubordinates>Elevate_UK_Coaching_GM</roleAndSubordinates>
+    </sharedTo>
+</ListView>

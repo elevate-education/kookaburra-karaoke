@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AH_list_duplicate_opps_clean</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Name__c</field>
+        <operation>contains</operation>
+        <value>2023 aus ss re-sign</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.District_Pitch,Opportunity.Seminar,Opportunity.Seminar_Re_Sign,Opportunity.Target,Opportunity.Tender,Opportunity.Master</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Suspended</value>
+    </filters>
+    <filters>
+        <field>Next_Activity_Date__c</field>
+        <operation>equals</operation>
+        <value>1/1/2023</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Seminar_Re_Sign</value>
+    </filters>
+    <label>AH list - duplicate opps clean</label>
+</ListView>

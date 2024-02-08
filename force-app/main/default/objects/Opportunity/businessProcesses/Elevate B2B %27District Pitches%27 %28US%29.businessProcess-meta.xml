@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elevate B2B %27District Pitches%27 %28US%29</fullName>
+    <description>Elevate B2B &apos;district pitch&apos; process - tracking speaking opportunities at the district level (USA only)</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contact Made</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Date Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

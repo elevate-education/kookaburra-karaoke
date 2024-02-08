@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ScheduledOpp_Coach_not_blank</fullName>
+    <active>true</active>
+    <description>&apos;Scheduled&apos; cannot be TRUE if OPPORTUNITY.Coach is BLANK</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName  = &quot;Elevate_B2C&quot;,
+     ISBLANK( b2c_Coach__c ),
+     Scheduled__c  = TRUE)</errorConditionFormula>
+    <errorDisplayField>b2c_Coach__c</errorDisplayField>
+    <errorMessage>Coach cannot be blank for a &apos;Scheduled&apos; Opportunity.</errorMessage>
+</ValidationRule>

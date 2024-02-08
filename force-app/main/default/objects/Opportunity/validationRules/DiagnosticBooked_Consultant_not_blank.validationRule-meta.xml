@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DiagnosticBooked_Consultant_not_blank</fullName>
+    <active>true</active>
+    <description>Opportunity cannot move into Diagnostic Booked stage IF OPPORTUNITY.Consultant is BLANK</description>
+    <errorConditionFormula>AND(  RecordType.DeveloperName  = &quot;Elevate_B2C&quot;, NOT(ISPICKVAL(  Type  , &quot;Upsell&quot;)) ,
+ISBLANK(  b2c_Consultant__c  ),
+ OR(ISPICKVAL( StageName , &quot;Diagnostic Booked&quot;),ISPICKVAL(StageName, &quot;Diagnostic Done&quot;),ISPICKVAL(StageName, &quot;Closed Won&quot;),ISPICKVAL(StageName, &quot;Closed Lost&quot;)) 
+)</errorConditionFormula>
+    <errorDisplayField>b2c_Consultant__c</errorDisplayField>
+    <errorMessage>Consultant cannot be blank for &apos;Diagnostic Booked&apos; or stages beyond that.</errorMessage>
+</ValidationRule>
