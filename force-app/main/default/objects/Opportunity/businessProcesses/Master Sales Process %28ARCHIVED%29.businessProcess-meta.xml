@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Master Sales Process %28ARCHIVED%29</fullName>
+    <description>This is the legacy sales process.</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Level 1 - Long Shot</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Level 2 - Potential Close</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Level 3 - Likely Close</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Level 4 - Imminent Close</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Level 5 - Date Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Suspended</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

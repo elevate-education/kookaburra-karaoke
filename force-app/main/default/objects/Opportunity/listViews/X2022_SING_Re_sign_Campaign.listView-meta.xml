@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2022_SING_Re_sign_Campaign</fullName>
+    <columns>State_Relevant_CSM__c</columns>
+    <columns>Next_Activity_Date__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Primary_Contact__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Booking_Confirmed_Date__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign_Name__c</field>
+        <operation>equals</operation>
+        <value>2022 Singapore South Hem SS Re-sign Campaign</value>
+    </filters>
+    <label>2022 SING Re-sign Campaign</label>
+    <sharedTo>
+        <group>Singapore_Admin</group>
+    </sharedTo>
+</ListView>
