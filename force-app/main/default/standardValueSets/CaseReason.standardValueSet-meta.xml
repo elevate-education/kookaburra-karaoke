@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Presenter</fullName>
+        <default>false</default>
+        <label>Presenter/Coach</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Product</fullName>
+        <default>false</default>
+        <label>Product</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin</fullName>
+        <default>false</default>
+        <label>Admin/Logistics</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>System</fullName>
+        <default>false</default>
+        <label>System</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>School</fullName>
+        <default>false</default>
+        <label>School</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Performance/Quality</fullName>
+        <default>false</default>
+        <label>Performance/Quality</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>LatePreBrief</fullName>
+        <default>false</default>
+        <label>Lateness - late to pre-brief</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Late30</fullName>
+        <default>false</default>
+        <label>Lateness - late within the 30</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Late15</fullName>
+        <default>false</default>
+        <label>Lateness - late within the 15</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Attendance</fullName>
+        <default>false</default>
+        <label>Non-Attendance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Professionalism</fullName>
+        <default>false</default>
+        <label>Professionalism</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bullying</fullName>
+        <default>false</default>
+        <label>Bullying/Harassment/Discrimination</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Injury</fullName>
+        <default>false</default>
+        <label>Illness/Injury/Near Miss</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Service</fullName>
+        <default>false</default>
+        <label>Customer Service</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Application Defect</fullName>
+        <default>false</default>
+        <label>Application Defect</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Enhancement Request</fullName>
+        <default>false</default>
+        <label>Enhancement Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Staff Onboarding</fullName>
+        <default>false</default>
+        <label>Staff Onboarding</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Staff Offboarding</fullName>
+        <default>false</default>
+        <label>Staff Offboarding</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>System Access</fullName>
+        <default>false</default>
+        <label>System Access</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Device setup/issue</fullName>
+        <default>false</default>
+        <label>Device setup/issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Requirements</fullName>
+        <default>false</default>
+        <label>Requirements</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

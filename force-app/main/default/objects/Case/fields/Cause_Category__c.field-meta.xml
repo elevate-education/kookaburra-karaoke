@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cause_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Cause Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel Issues</label>
+            </value>
+            <value>
+                <fullName>Presenter</fullName>
+                <default>false</default>
+                <label>Presenter/Coach Error</label>
+            </value>
+            <value>
+                <fullName>Swap</fullName>
+                <default>false</default>
+                <label>Late Swap Error</label>
+            </value>
+            <value>
+                <fullName>Resigned</fullName>
+                <default>false</default>
+                <label>Resigned</label>
+            </value>
+            <value>
+                <fullName>External</fullName>
+                <default>false</default>
+                <label>External Factor</label>
+            </value>
+            <value>
+                <fullName>RecurringIllness</fullName>
+                <default>false</default>
+                <label>Recurring Illness</label>
+            </value>
+            <value>
+                <fullName>Illness</fullName>
+                <default>false</default>
+                <label>Illness</label>
+            </value>
+            <value>
+                <fullName>MentalHealth</fullName>
+                <default>false</default>
+                <label>Mental Health</label>
+            </value>
+            <value>
+                <fullName>Pitch</fullName>
+                <default>false</default>
+                <label>Pitch</label>
+            </value>
+            <value>
+                <fullName>Crowd</fullName>
+                <default>false</default>
+                <label>Crowd Control</label>
+            </value>
+            <value>
+                <fullName>Script</fullName>
+                <default>false</default>
+                <label>Script Knowledge</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <default>false</default>
+                <label>Timing</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Did not collect feedback</label>
+            </value>
+            <value>
+                <fullName>Language</fullName>
+                <default>false</default>
+                <label>Language</label>
+            </value>
+            <value>
+                <fullName>Conduct</fullName>
+                <default>false</default>
+                <label>Conduct</label>
+            </value>
+            <value>
+                <fullName>Uniform</fullName>
+                <default>false</default>
+                <label>Uniform</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Poor Communication</label>
+            </value>
+            <value>
+                <fullName>SocialMedia</fullName>
+                <default>false</default>
+                <label>Social Media Policy Breach</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Requirements</fullName>
+                <default>false</default>
+                <label>Requirements</label>
+            </value>
+            <value>
+                <fullName>Design</fullName>
+                <default>false</default>
+                <label>Design</label>
+            </value>
+            <value>
+                <fullName>Build</fullName>
+                <default>false</default>
+                <label>Build</label>
+            </value>
+            <value>
+                <fullName>Testing</fullName>
+                <default>false</default>
+                <label>Testing</label>
+            </value>
+            <value>
+                <fullName>Governance</fullName>
+                <default>false</default>
+                <label>Governance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>LatePreBrief</controllingFieldValue>
+            <controllingFieldValue>Late30</controllingFieldValue>
+            <controllingFieldValue>Late15</controllingFieldValue>
+            <valueName>Travel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatePreBrief</controllingFieldValue>
+            <controllingFieldValue>Attendance</controllingFieldValue>
+            <controllingFieldValue>Late30</controllingFieldValue>
+            <controllingFieldValue>Late15</controllingFieldValue>
+            <valueName>Presenter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatePreBrief</controllingFieldValue>
+            <controllingFieldValue>Attendance</controllingFieldValue>
+            <controllingFieldValue>Late30</controllingFieldValue>
+            <controllingFieldValue>Late15</controllingFieldValue>
+            <valueName>Swap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatePreBrief</controllingFieldValue>
+            <controllingFieldValue>Late30</controllingFieldValue>
+            <controllingFieldValue>Late15</controllingFieldValue>
+            <valueName>External</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LatePreBrief</controllingFieldValue>
+            <controllingFieldValue>Attendance</controllingFieldValue>
+            <controllingFieldValue>Late30</controllingFieldValue>
+            <controllingFieldValue>Late15</controllingFieldValue>
+            <controllingFieldValue>Performance/Quality</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Staff Offboarding</controllingFieldValue>
+            <controllingFieldValue>System Access</controllingFieldValue>
+            <controllingFieldValue>Device setup/issue</controllingFieldValue>
+            <controllingFieldValue>Application Defect</controllingFieldValue>
+            <controllingFieldValue>Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Staff Onboarding</controllingFieldValue>
+            <valueName>Requirements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Staff Offboarding</controllingFieldValue>
+            <controllingFieldValue>System Access</controllingFieldValue>
+            <controllingFieldValue>Device setup/issue</controllingFieldValue>
+            <controllingFieldValue>Application Defect</controllingFieldValue>
+            <controllingFieldValue>Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Staff Onboarding</controllingFieldValue>
+            <valueName>Design</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Staff Offboarding</controllingFieldValue>
+            <controllingFieldValue>System Access</controllingFieldValue>
+            <controllingFieldValue>Device setup/issue</controllingFieldValue>
+            <controllingFieldValue>Application Defect</controllingFieldValue>
+            <controllingFieldValue>Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Staff Onboarding</controllingFieldValue>
+            <valueName>Build</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Staff Offboarding</controllingFieldValue>
+            <controllingFieldValue>System Access</controllingFieldValue>
+            <controllingFieldValue>Device setup/issue</controllingFieldValue>
+            <controllingFieldValue>Application Defect</controllingFieldValue>
+            <controllingFieldValue>Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Staff Onboarding</controllingFieldValue>
+            <valueName>Testing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Staff Offboarding</controllingFieldValue>
+            <controllingFieldValue>System Access</controllingFieldValue>
+            <controllingFieldValue>Device setup/issue</controllingFieldValue>
+            <controllingFieldValue>Application Defect</controllingFieldValue>
+            <controllingFieldValue>Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Staff Onboarding</controllingFieldValue>
+            <valueName>Governance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Attendance</controllingFieldValue>
+            <valueName>Resigned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professionalism</controllingFieldValue>
+            <valueName>Language</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professionalism</controllingFieldValue>
+            <valueName>Conduct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professionalism</controllingFieldValue>
+            <valueName>Uniform</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professionalism</controllingFieldValue>
+            <valueName>Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professionalism</controllingFieldValue>
+            <valueName>SocialMedia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance/Quality</controllingFieldValue>
+            <valueName>Pitch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance/Quality</controllingFieldValue>
+            <valueName>Crowd</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance/Quality</controllingFieldValue>
+            <valueName>Script</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance/Quality</controllingFieldValue>
+            <valueName>Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Performance/Quality</controllingFieldValue>
+            <valueName>Feedback</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

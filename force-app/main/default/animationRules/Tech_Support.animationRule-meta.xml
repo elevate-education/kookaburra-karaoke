@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>Tech_Support</developerName>
+    <isActive>true</isActive>
+    <masterLabel>Tech Support</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>Salesforce_Request</recordTypeName>
+    <sobjectType>Case</sobjectType>
+    <targetField>Status</targetField>
+    <targetFieldChangeToValues>Closed - Resolved</targetFieldChangeToValues>
+</AnimationRule>
