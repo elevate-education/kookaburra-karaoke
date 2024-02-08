@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce_Request_CL</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>Business_Unit__c</fields>
+    <fields>Status</fields>
+    <fields>Priority</fields>
+    <fields>Reason</fields>
+    <fields>Function__c</fields>
+    <label>Salesforce Request CL</label>
+</CompactLayout>
