@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Quote</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Generate Quote</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/APXTConga4__Conga_Composer
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Opportunity.Id}
+&amp;QueryID=a046F00001gVbdsQAC?pv0={!Opportunity.Id},
+a046F00001gVbdrQAC?pv0={!Opportunity.Id},
+a046F00001gVbdqQAC?pv0={!Opportunity.Id},
+a046F00001gVbdtQAC?pv0={!Opportunity.Id},
+a046F00001gVbdpQAC?pv0={!Opportunity.Id},
+a046F00001gVbduQAC?pv0={!Opportunity.Id},
+&amp;templateid={!IF(Opportunity.Business_Unit__c = &apos;Elevate South Africa&apos;, &apos;a0I5i000000IPoWEAW&apos;,  
+IF(Opportunity.Business_Unit__c = &apos;Elevate UK&apos;, &apos;a0I6F00000wEd2bUAC&apos;, 
+&apos;a0I6F00000fq2Oh&apos;) )}
+&amp;DS7=11&amp;DefaultPDF=1
+&amp;OFN={!IF(Opportunity.Business_Unit__c = &apos;Elevate UK&apos;, &apos;Programme+Proposal&apos;, &apos;Program+Proposal&apos;)}+-+{!Opportunity.Name}
+&amp;CurrencyCulture={!IF(Opportunity.Business_Unit__c = &apos;Elevate UK&apos;, &apos;en-GB&apos;, IF(Opportunity.Business_Unit__c = &apos;Elevate South Africa&apos;, &apos;en-ZA&apos;, &apos;en-AU&apos;))}</url>
+</WebLink>

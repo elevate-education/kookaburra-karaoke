@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2C_Aus_Pipeline_Upsell</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>b2c_Preferred_Days_Times__c</columns>
+    <columns>b2c_Recommended_Program__c</columns>
+    <columns>b2c_Consultant__c</columns>
+    <columns>Diagnostic_Form_Link__c</columns>
+    <columns>Coach_Handover_Link__c</columns>
+    <columns>b2c_Diagnostic_Date__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Elevate_B2C</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Diagnostic Requested,Diagnostic Pending,Diagnostic Booked,Diagnostic Done,Pending,Suspended,Payment Pending,Closed Won</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.NAME</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <filters>
+        <field>Student__c</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.TYPE</field>
+        <operation>equals</operation>
+        <value>Upsell</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>equals</operation>
+        <value>LAST_QUARTER</value>
+    </filters>
+    <label>B2C Pipeline Upsell</label>
+    <sharedTo>
+        <role>Elevate_Services</role>
+        <role>Elevate_UK_General_Manager</role>
+        <roleAndSubordinates>Elevate_Australia_Coaching_GM</roleAndSubordinates>
+        <roleAndSubordinates>Elevate_South_Africa_Coaching_GM</roleAndSubordinates>
+        <roleAndSubordinates>Elevate_UK_Coaching_GM</roleAndSubordinates>
+    </sharedTo>
+</ListView>
