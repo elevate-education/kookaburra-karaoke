@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Probation_End_Date__c</fullName>
+    <description>Start Date + 6 Months. To revert just clear the value and will return to Initial Probation Date</description>
     <externalId>false</externalId>
-    <formula>sked_Start_Date__c + 60</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Start Date + 6 Months.</inlineHelpText>
     <label>Probation End Date</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
