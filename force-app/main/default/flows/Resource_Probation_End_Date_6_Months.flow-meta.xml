@@ -9,9 +9,16 @@
         <defaultConnectorLabel>Override ProbEndDate</defaultConnectorLabel>
         <rules>
             <name>Initial_ProbEndDate</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Probation_End_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.sked_Start_Date__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -24,6 +31,30 @@
         </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>CalculatePlus6Mos</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+  YEAR( {!$Record.sked_Start_Date__c}) + FLOOR( ( MONTH ( {!$Record.sked_Start_Date__c}) + 6 - 1 ) / 12 ),
+  MOD( MONTH ( {!$Record.sked_Start_Date__c}) + 6 - 1 + 
+    IF( DAY ( {!$Record.sked_Start_Date__c}) &gt; CASE( MOD( MONTH( {!$Record.sked_Start_Date__c}) + 6 - 1, 12 ) + 1, 
+      2, 28,
+      4, 30,
+      6, 30,
+      9, 30, 
+      11, 30,
+      31 ), 1, 0 ), 12 ) + 1,
+    IF( DAY( {!$Record.sked_Start_Date__c}) &gt; CASE( MOD( MONTH( {!$Record.sked_Start_Date__c}) + 6 - 1, 12 ) + 1,
+      2, 28, 
+      4, 30, 
+      6, 30, 
+      9, 30, 
+      11, 30, 
+      31 ), 
+    1, DAY( {!$Record.sked_Start_Date__c})
+  )
+)</expression>
+    </formulas>
     <formulas>
         <description>Start Date + 60 Days</description>
         <name>PDplus6Months</name>
@@ -63,7 +94,7 @@ DATE( YEAR({!$Record.sked_Start_Date__c}) , MONTH({!$Record.sked_Start_Date__c})
         <inputAssignments>
             <field>Probation_End_Date__c</field>
             <value>
-                <elementReference>PDplus6Months</elementReference>
+                <elementReference>CalculatePlus6Mos</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
