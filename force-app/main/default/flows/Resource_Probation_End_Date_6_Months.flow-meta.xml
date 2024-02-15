@@ -5,7 +5,7 @@
         <name>Populate_PD</name>
         <label>Populate PD</label>
         <locationX>182</locationX>
-        <locationY>287</locationY>
+        <locationY>323</locationY>
         <defaultConnectorLabel>Override ProbEndDate</defaultConnectorLabel>
         <rules>
             <name>Initial_ProbEndDate</name>
@@ -19,7 +19,7 @@
             </conditions>
             <conditions>
                 <leftValueReference>$Record.sked_Start_Date__c</leftValueReference>
-                <operator>IsNull</operator>
+                <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
@@ -64,6 +64,11 @@ DATE( YEAR({!$Record.sked_Start_Date__c})+1 , MOD (MONTH({!$Record.sked_Start_Da
 DATE( YEAR({!$Record.sked_Start_Date__c}) , MONTH({!$Record.sked_Start_Date__c})+6 , DAY({!$Record.sked_Start_Date__c}) )
 )</expression>
     </formulas>
+    <formulas>
+        <name>Plus6Mos</name>
+        <dataType>Date</dataType>
+        <expression>ADDMONTHS({!$Record.sked_Start_Date__c},6)</expression>
+    </formulas>
     <interviewLabel>Resource: Probation End Date + 6 Months {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Resource: Probation End Date + 6 Months</label>
     <processMetadataValues>
@@ -90,11 +95,11 @@ DATE( YEAR({!$Record.sked_Start_Date__c}) , MONTH({!$Record.sked_Start_Date__c})
         <name>Update_Probation_End_Date</name>
         <label>Update Probation End Date</label>
         <locationX>50</locationX>
-        <locationY>395</locationY>
+        <locationY>431</locationY>
         <inputAssignments>
             <field>Probation_End_Date__c</field>
             <value>
-                <elementReference>CalculatePlus6Mos</elementReference>
+                <elementReference>Plus6Mos</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -107,7 +112,7 @@ DATE( YEAR({!$Record.sked_Start_Date__c}) , MONTH({!$Record.sked_Start_Date__c})
         </connector>
         <object>sked__Resource__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
-        <triggerType>RecordBeforeSave</triggerType>
+        <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
 </Flow>
