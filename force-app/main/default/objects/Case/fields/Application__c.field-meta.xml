@@ -62,6 +62,21 @@
                 <default>false</default>
                 <label>Other</label>
             </value>
+            <value>
+                <fullName>Calendly</fullName>
+                <default>false</default>
+                <label>Calendly</label>
+            </value>
+            <value>
+                <fullName>Klaviyo</fullName>
+                <default>false</default>
+                <label>Klaviyo</label>
+            </value>
+            <value>
+                <fullName>Office365</fullName>
+                <default>false</default>
+                <label>Office365</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
