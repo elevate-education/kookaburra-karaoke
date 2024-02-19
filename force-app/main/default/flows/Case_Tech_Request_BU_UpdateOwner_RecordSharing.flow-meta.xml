@@ -5,7 +5,7 @@
         <name>Assign_Priority</name>
         <label>Assign Priority</label>
         <locationX>50</locationX>
-        <locationY>1247</locationY>
+        <locationY>1355</locationY>
         <assignmentItems>
             <assignToReference>CasePriority</assignToReference>
             <operator>Assign</operator>
@@ -21,7 +21,7 @@
         <name>Assign_Priority2</name>
         <label>Assign Priority</label>
         <locationX>314</locationX>
-        <locationY>1247</locationY>
+        <locationY>1355</locationY>
         <assignmentItems>
             <assignToReference>CasePriority</assignToReference>
             <operator>Assign</operator>
@@ -37,7 +37,7 @@
         <name>Assign_Priority3</name>
         <label>Assign Priority</label>
         <locationX>578</locationX>
-        <locationY>1247</locationY>
+        <locationY>1355</locationY>
         <assignmentItems>
             <assignToReference>CasePriority</assignToReference>
             <operator>Assign</operator>
@@ -53,7 +53,7 @@
         <name>Assign_Priority4</name>
         <label>Assign Priority</label>
         <locationX>842</locationX>
-        <locationY>1247</locationY>
+        <locationY>1355</locationY>
         <assignmentItems>
             <assignToReference>CasePriority</assignToReference>
             <operator>Assign</operator>
@@ -68,8 +68,8 @@
     <assignments>
         <name>Assign_Product_Line</name>
         <label>Assign Product Line</label>
-        <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationX>50</locationX>
+        <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>ProductLine</assignToReference>
             <operator>Assign</operator>
@@ -78,14 +78,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Owner</targetReference>
+            <targetReference>Case_Priority</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Product_Line2</name>
         <label>Assign Product Line</label>
-        <locationX>446</locationX>
-        <locationY>431</locationY>
+        <locationX>314</locationX>
+        <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>ProductLine</assignToReference>
             <operator>Assign</operator>
@@ -94,14 +94,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Owner</targetReference>
+            <targetReference>Case_Priority</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Product_Line3</name>
         <label>Assign Product Line</label>
-        <locationX>710</locationX>
-        <locationY>431</locationY>
+        <locationX>578</locationX>
+        <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>ProductLine</assignToReference>
             <operator>Assign</operator>
@@ -110,14 +110,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Owner</targetReference>
+            <targetReference>Case_Priority</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Product_Line4</name>
         <label>Assign Product Line</label>
-        <locationX>974</locationX>
-        <locationY>431</locationY>
+        <locationX>842</locationX>
+        <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>ProductLine</assignToReference>
             <operator>Assign</operator>
@@ -126,15 +126,15 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Owner</targetReference>
+            <targetReference>Case_Priority</targetReference>
         </connector>
     </assignments>
     <assignments>
         <description>Group: Elevate &amp; Cura Office Staff</description>
         <name>Share_Case_with_Internal_User</name>
         <label>Share Case with Internal User</label>
-        <locationX>578</locationX>
-        <locationY>923</locationY>
+        <locationX>226</locationX>
+        <locationY>623</locationY>
         <assignmentItems>
             <assignToReference>CaseShare.CaseId</assignToReference>
             <operator>Assign</operator>
@@ -168,11 +168,10 @@
         </connector>
     </assignments>
     <decisions>
-        <description>Based on Business Impact</description>
         <name>Case_Priority</name>
         <label>Case Priority?</label>
         <locationX>578</locationX>
-        <locationY>1139</locationY>
+        <locationY>1247</locationY>
         <defaultConnector>
             <targetReference>Update_Case_Pri_ProductLine_BU</targetReference>
         </defaultConnector>
@@ -239,11 +238,40 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Changed_By_Admin</name>
+        <label>Changed By Admin?</label>
+        <locationX>226</locationX>
+        <locationY>839</locationY>
+        <defaultConnector>
+            <targetReference>Update_Product_Line</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>AdminChanged</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>NewRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <description>For Case Share</description>
         <name>Update_Owner</name>
         <label>Update Owner?</label>
-        <locationX>578</locationX>
-        <locationY>623</locationY>
+        <locationX>226</locationX>
+        <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Share_Case_with_Internal_User</targetReference>
         </defaultConnector>
@@ -264,49 +292,20 @@
             <label>Other Owner</label>
         </rules>
         <rules>
-            <name>Admin_Team</name>
+            <name>SFDC_Queue</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>0056F000006B5pGQAS</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>0056F00000AroYUQAZ</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>0056F00000FDre7QAD</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>005Mo000001nEKbIAM</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Share_Case_with_Internal_User</targetReference>
-            </connector>
-            <label>Admin Team</label>
-        </rules>
-        <rules>
-            <name>SFDC_Queue</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue>00G8s00000429XxEAI</stringValue>
+                    <stringValue>SFDC</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SFDC</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -320,11 +319,11 @@
         <name>Update_Product_Line</name>
         <label>Update Product Line?</label>
         <locationX>578</locationX>
-        <locationY>323</locationY>
+        <locationY>947</locationY>
         <defaultConnector>
-            <targetReference>Assign_Product_Line4</targetReference>
+            <targetReference>Case_Priority</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>B2B Study Skills</defaultConnectorLabel>
+        <defaultConnectorLabel>Default</defaultConnectorLabel>
         <rules>
             <name>Cura</name>
             <conditionLogic>and</conditionLogic>
@@ -370,8 +369,48 @@
             </connector>
             <label>Connect</label>
         </rules>
+        <rules>
+            <name>B2B_Study_Skills</name>
+            <conditionLogic>NOT(1 OR 2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.UserRole.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cura HQ</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Connect</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Product_Line4</targetReference>
+            </connector>
+            <label>B2B Study Skills</label>
+        </rules>
     </decisions>
     <environments>Default</environments>
+    <formulas>
+        <name>AdminChanged</name>
+        <dataType>Number</dataType>
+        <expression>IF({!$Profile.Name} = &apos;System Administrator&apos;, 1,0 )</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>NewRecord</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
     <interviewLabel>Case: Salesforce Request Case UpdateOwner-RecordSharing {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Case: Tech Request BU-UpdateOwner-RecordSharing</label>
     <processMetadataValues>
@@ -396,18 +435,18 @@
     <recordCreates>
         <name>Create_Case_Share</name>
         <label>Create Case Share</label>
-        <locationX>578</locationX>
-        <locationY>1031</locationY>
+        <locationX>226</locationX>
+        <locationY>731</locationY>
         <connector>
-            <targetReference>Case_Priority</targetReference>
+            <targetReference>Changed_By_Admin</targetReference>
         </connector>
         <inputReference>CaseShare</inputReference>
     </recordCreates>
     <recordUpdates>
         <name>Update_Case_Owner</name>
         <label>Update Case Owner</label>
-        <locationX>622</locationX>
-        <locationY>731</locationY>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Share_Case_with_Internal_User</targetReference>
         </connector>
@@ -423,7 +462,7 @@
         <name>Update_Case_Pri_ProductLine_BU</name>
         <label>Update Case Prio-ProdLine-BU</label>
         <locationX>578</locationX>
-        <locationY>1439</locationY>
+        <locationY>1547</locationY>
         <inputAssignments>
             <field>Business_Unit__c</field>
             <value>
@@ -445,10 +484,10 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>452</locationX>
+        <locationX>100</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Product_Line</targetReference>
+            <targetReference>Update_Owner</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
