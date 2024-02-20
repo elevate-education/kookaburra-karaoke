@@ -133,8 +133,8 @@
         <description>Group: Elevate &amp; Cura Office Staff</description>
         <name>Share_Case_with_Internal_User</name>
         <label>Share Case with Internal User</label>
-        <locationX>226</locationX>
-        <locationY>623</locationY>
+        <locationX>578</locationX>
+        <locationY>731</locationY>
         <assignmentItems>
             <assignToReference>CaseShare.CaseId</assignToReference>
             <operator>Assign</operator>
@@ -238,24 +238,17 @@
         </rules>
     </decisions>
     <decisions>
-        <name>Changed_By_Admin</name>
-        <label>Changed By Admin?</label>
-        <locationX>226</locationX>
-        <locationY>839</locationY>
+        <name>New_Record</name>
+        <label>New Record?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
         <defaultConnector>
-            <targetReference>Update_Product_Line</targetReference>
+            <targetReference>Update_Owner</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Yes</name>
+            <name>No</name>
             <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>AdminChanged</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <numberValue>1.0</numberValue>
-                </rightValue>
-            </conditions>
             <conditions>
                 <leftValueReference>NewRecord</leftValueReference>
                 <operator>EqualTo</operator>
@@ -263,15 +256,15 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <label>Yes</label>
+            <label>No</label>
         </rules>
     </decisions>
     <decisions>
         <description>For Case Share</description>
         <name>Update_Owner</name>
         <label>Update Owner?</label>
-        <locationX>226</locationX>
-        <locationY>323</locationY>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
         <defaultConnector>
             <targetReference>Share_Case_with_Internal_User</targetReference>
         </defaultConnector>
@@ -435,18 +428,18 @@
     <recordCreates>
         <name>Create_Case_Share</name>
         <label>Create Case Share</label>
-        <locationX>226</locationX>
-        <locationY>731</locationY>
+        <locationX>578</locationX>
+        <locationY>839</locationY>
         <connector>
-            <targetReference>Changed_By_Admin</targetReference>
+            <targetReference>Update_Product_Line</targetReference>
         </connector>
         <inputReference>CaseShare</inputReference>
     </recordCreates>
     <recordUpdates>
         <name>Update_Case_Owner</name>
         <label>Update Case Owner</label>
-        <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationX>534</locationX>
+        <locationY>539</locationY>
         <connector>
             <targetReference>Share_Case_with_Internal_User</targetReference>
         </connector>
@@ -484,10 +477,10 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>100</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Owner</targetReference>
+            <targetReference>New_Record</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
