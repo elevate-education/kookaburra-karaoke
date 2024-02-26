@@ -272,19 +272,23 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Duplicate</fullName>
+            <fullName>No debrief</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Internal</fullName>
+            <fullName>Other</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Quality</fullName>
+            <fullName>Poor diagnostic</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Time</fullName>
+            <fullName>Student not on board</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timing</fullName>
             <default>false</default>
         </values>
     </picklistValues>
