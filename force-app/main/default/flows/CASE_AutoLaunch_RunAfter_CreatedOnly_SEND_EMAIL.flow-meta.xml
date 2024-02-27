@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>When a new case (type: School) is created, send an email notification to:
+client services shared mailbox: schools@
+SBU General Manager role&apos;s email address</description>
+        <name>Send_email_Notification</name>
+        <label>Send email notification</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <actionName>GLSendEmail__SendEmail</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>ContactorLeadID</name>
+            <value>
+                <elementReference>$Record.CreatedBy.ManagerId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>EmailTemplateId</name>
+            <value>
+                <stringValue>00XMo000000XHzlMAG</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>HtmlBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OrgWideEmailAddress</name>
+            <value>
+                <stringValue>schools@elevateeducation.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RelatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>SaveAsActivity</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ToAddresses</name>
+            <value>
+                <stringValue>schools@elevateeducation.com</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>GLSendEmail__SendEmail</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>60.0</apiVersion>
+    <description>When a new case (type: School) is created, send an email notification to:
+client services shared mailbox: schools@
+SBU General Manager role&apos;s email address</description>
+    <environments>Default</environments>
+    <interviewLabel>CASE AutoLaunch RunAfter CreatedOnly SEND EMAIL {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CASE AutoLaunch RunAfter CreatedOnly SEND EMAIL</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Send_email_Notification</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Business_Unit__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Elevate USA</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0126F000001WxV7QAK</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
