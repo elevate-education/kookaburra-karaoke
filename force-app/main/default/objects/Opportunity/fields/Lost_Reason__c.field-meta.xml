@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_Reason__c</fullName>
+    <description>Further elaborate lost reason for close lost opportunity</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Further elaborate lost reason for close lost opportunity</inlineHelpText>
+    <label>Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Budget</fullName>
+                <default>false</default>
+                <label>Budget</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Do not see the value</fullName>
+                <default>false</default>
+                <label>Do not see the value</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Time</fullName>
+                <default>false</default>
+                <label>Time</label>
+            </value>
+            <value>
+                <fullName>Repeat</fullName>
+                <default>false</default>
+                <label>Repeat</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Trial Opt Out</fullName>
+                <default>false</default>
+                <label>Trial Opt Out</label>
+            </value>
+            <value>
+                <fullName>Student not on board</fullName>
+                <default>false</default>
+                <label>Student not on board</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Tutoring</fullName>
+                <default>false</default>
+                <label>Tutoring</label>
+            </value>
+            <value>
+                <fullName>Poor diagnostic</fullName>
+                <default>false</default>
+                <label>Poor diagnostic</label>
+            </value>
+            <value>
+                <fullName>No debrief</fullName>
+                <default>false</default>
+                <label>No debrief</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <default>false</default>
+                <label>Timing</label>
+            </value>
+            <value>
+                <fullName>No Reason Provided</fullName>
+                <default>false</default>
+                <label>No Reason Provided</label>
+            </value>
+            <value>
+                <fullName>Ghosted</fullName>
+                <default>false</default>
+                <label>Ghosted</label>
+            </value>
+            <value>
+                <fullName>NDIS Funding</fullName>
+                <default>false</default>
+                <label>NDIS Funding</label>
+            </value>
+            <value>
+                <fullName>Can&apos;t Service</fullName>
+                <default>false</default>
+                <label>Can&apos;t Service</label>
+            </value>
+            <value>
+                <fullName>Didn&apos;t Run Debrief with Parent</fullName>
+                <default>false</default>
+                <label>Didn&apos;t Run Debrief with Parent</label>
+            </value>
+            <value>
+                <fullName>Value</fullName>
+                <default>false</default>
+                <label>Value</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Child Not Keen</fullName>
+                <default>false</default>
+                <label>Child Not Keen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
