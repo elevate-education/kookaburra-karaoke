@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Screening_call_link__c</fullName>
+    <description>This field was adapted to provide the relevant FormAssembly form number to be used in the Screening call button</description>
+    <externalId>false</externalId>
+    <formula>IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate Australia&apos;) , CONTAINS( Position_name__c , &apos;Study Skills&apos;) ) , &quot;59&quot;, 
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate Australia&apos;) , CONTAINS( Position_name__c , &apos;Connect&apos;) ) , &quot;64&quot;, 
+IF(  AND(OR(ISPICKVAL( Business_Unit__c , &apos;Elevate Australia&apos;),ISPICKVAL( Business_Unit__c , &apos;Elevate Australia Coaching&apos;)) , CONTAINS( Position_name__c , &apos;Coach&apos;) ) , &quot;68&quot;,
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , CONTAINS( Position_name__c , &apos;Study Skills&apos;) ) , &quot;87&quot;,
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , CONTAINS( Position_name__c , &apos;Connect&apos;) ) , &quot;96&quot;, 
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , CONTAINS( Position_name__c , &apos;Coach&apos;) ) , &quot;116&quot;,
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate South Africa&apos;) , CONTAINS( Position_name__c , &apos;Study Skills&apos;) ) , &quot;124&quot;,
+&quot;59&quot;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Screening call link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
