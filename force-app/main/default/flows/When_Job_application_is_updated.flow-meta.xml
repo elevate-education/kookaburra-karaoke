@@ -429,12 +429,19 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Elevate_Australia</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Business_Unit__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>Elevate Australia</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate Australia Coaching</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -758,7 +765,8 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>UK only: Automated &apos;Thank you&apos; email removed. Job application form will redirect applicants towards &apos;Book your own screening call&apos; calendly link instead. (Replicating AUS)</description>
+    <description>AUS only: Flow modified to accommodate &apos;Elevate AUS Coaching&apos; BU;
+UK only: Automated &apos;Thank you&apos; email removed. Job application form will redirect applicants towards &apos;Book your own screening call&apos; calendly link instead. (Replicating AUS)</description>
     <environments>Default</environments>
     <formulas>
         <name>CheckifNew</name>
@@ -1053,7 +1061,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <textTemplates>
         <name>ThankYouEmail</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
