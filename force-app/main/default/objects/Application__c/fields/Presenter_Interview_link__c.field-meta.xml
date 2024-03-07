@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Presenter_Interview_link__c</fullName>
+    <description>This field was adapted to provide the relevant FormAssembly form number to be used in the Interview button</description>
+    <externalId>false</externalId>
+    <formula>IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate Australia&apos;) , CONTAINS( Position_name__c , &apos;Study Skills&apos;) ) , &quot;58&quot;, 
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate Australia&apos;) , CONTAINS( Position_name__c , &apos;Connect&apos;) ) , &quot;65&quot;, 
+IF(  AND( OR(ISPICKVAL( Business_Unit__c , &apos;Elevate Australia Coaching&apos;),ISPICKVAL( Business_Unit__c , &apos;Elevate Australia&apos;)) , CONTAINS( Position_name__c , &apos;Coach&apos;) ) , &quot;67&quot;,
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , CONTAINS( Position_name__c , &apos;Study Skills&apos;) ) , &quot;88&quot;,
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , CONTAINS( Position_name__c , &apos;Connect&apos;) ) , &quot;97&quot;, 
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , CONTAINS( Position_name__c , &apos;Coach&apos;) ) , &quot;117&quot;, 
+IF(  AND(ISPICKVAL( Business_Unit__c , &apos;Elevate South Africa&apos;) , CONTAINS( Position_name__c , &apos;Study Skills&apos;) ) , &quot;125&quot;, 
+&quot;112&quot;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Presenter Interview link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
