@@ -1,65 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Thank_you_email_0</name>
-        <label>Thank you email</label>
-        <locationX>710</locationX>
-        <locationY>1163</locationY>
-        <actionName>GLSendEmail__SendEmail</actionName>
-        <actionType>apex</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>ContactorLeadID</name>
-            <value>
-                <elementReference>$Record.Candidate_Contact__r.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>EmailTemplateId</name>
-            <value>
-                <stringValue>00X5i000000l0sFEAQ</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>HtmlBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>OrgWideEmailAddress</name>
-            <value>
-                <stringValue>jobs@elevateeducation.com</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>RelatedToId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>SaveAsActivity</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>subject</name>
-            <value>
-                <stringValue>Thank you for your application</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>ToAddresses</name>
-            <value>
-                <elementReference>$Record.Candidate__r.Email__c</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>GLSendEmail__SendEmail</nameSegment>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
-    <actionCalls>
         <name>Thank_you_email_0_0</name>
         <label>Thank you email</label>
         <locationX>974</locationX>
@@ -511,9 +452,6 @@
                     <stringValue>Connect</stringValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>Thank_you_email_0</targetReference>
-            </connector>
             <label>Connect</label>
         </rules>
         <rules>
@@ -765,7 +703,8 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>AUS only: Flow modified to accommodate &apos;Elevate AUS Coaching&apos; BU;
+    <description>AUS Connect only: Flow modified to accommodate &apos;Book Your Own Screening Call&apos;;
+AUS only: Flow modified to accommodate &apos;Elevate AUS Coaching&apos; BU;
 UK only: Automated &apos;Thank you&apos; email removed. Job application form will redirect applicants towards &apos;Book your own screening call&apos; calendly link instead. (Replicating AUS)</description>
     <environments>Default</environments>
     <formulas>

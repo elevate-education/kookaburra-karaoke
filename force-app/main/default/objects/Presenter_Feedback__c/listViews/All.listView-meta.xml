@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>School__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Total_Feedback__c</columns>
+    <columns>Recommending__c</columns>
+    <columns>Time_Well_Spent__c</columns>
+    <columns>Average_Feedback__c</columns>
+    <columns>Summary__c</columns>
+    <columns>Presenter__c</columns>
+    <columns>Job_Allocation__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Total_Feedback__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>All</label>
+</ListView>
