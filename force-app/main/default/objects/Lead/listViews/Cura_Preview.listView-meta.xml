@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cura_Preview</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>cura_Start_Time__c</columns>
+    <columns>cura_End_Time__c</columns>
+    <columns>Account_Country__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Business_Unit__c</field>
+        <operation>equals</operation>
+        <value>Cura</value>
+    </filters>
+    <filters>
+        <field>cura_Start_Time__c</field>
+        <operation>greaterThan</operation>
+        <value>10/17/2023 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>MQL,Open,Open (Not Contacted),Working,SQL,Unqualified,Closed (Unqualified)</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notContain</operation>
+        <value>Cura,Test</value>
+    </filters>
+    <label>Cura Previews</label>
+    <sharedTo>
+        <roleAndSubordinates>Cura_HQ</roleAndSubordinates>
+    </sharedTo>
+</ListView>
