@@ -40,7 +40,7 @@
         <description>Send email to support, contact not found in Salesforce.</description>
         <name>Contact_not_Found_0</name>
         <label>Contact not Found</label>
-        <locationX>5682</locationX>
+        <locationX>6144</locationX>
         <locationY>2375</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
@@ -107,7 +107,7 @@
     <decisions>
         <name>Account</name>
         <label>Account?</label>
-        <locationX>1499</locationX>
+        <locationX>1730</locationX>
         <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Find_Opportunity</targetReference>
@@ -133,7 +133,7 @@
         <description>Does the Calendly invite relate to B2B or B2C part of the business?</description>
         <name>B2C_or_B2B</name>
         <label>B2C or B2B?</label>
-        <locationX>4510</locationX>
+        <locationX>4972</locationX>
         <locationY>2051</locationY>
         <defaultConnector>
             <targetReference>Match_Contact</targetReference>
@@ -158,7 +158,7 @@
     <decisions>
         <name>Campaign</name>
         <label>Campaign?</label>
-        <locationX>2912</locationX>
+        <locationX>3374</locationX>
         <locationY>1511</locationY>
         <defaultConnector>
             <targetReference>Find_Contact</targetReference>
@@ -184,7 +184,7 @@
     <decisions>
         <name>Case</name>
         <label>Case?</label>
-        <locationX>2283</locationX>
+        <locationX>2745</locationX>
         <locationY>1079</locationY>
         <defaultConnector>
             <targetReference>Find_Contract</targetReference>
@@ -210,7 +210,7 @@
     <decisions>
         <name>Contact</name>
         <label>Contact?</label>
-        <locationX>3310</locationX>
+        <locationX>3772</locationX>
         <locationY>1727</locationY>
         <defaultConnector>
             <targetReference>Find_Lead</targetReference>
@@ -236,7 +236,7 @@
     <decisions>
         <name>Contact_Matched</name>
         <label>Contact Matched?</label>
-        <locationX>5319</locationX>
+        <locationX>5781</locationX>
         <locationY>2267</locationY>
         <defaultConnector>
             <targetReference>Contact_not_Found_0</targetReference>
@@ -261,7 +261,7 @@
     <decisions>
         <name>Contract</name>
         <label>Contract?</label>
-        <locationX>2581</locationX>
+        <locationX>3043</locationX>
         <locationY>1295</locationY>
         <defaultConnector>
             <targetReference>Find_Campaign</targetReference>
@@ -424,7 +424,7 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
     <decisions>
         <name>Is_invitee_created</name>
         <label>Invitee created?</label>
-        <locationX>6352</locationX>
+        <locationX>6756</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -447,7 +447,7 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
         <description>We cannot update a converted lead.  If the lead is converted, we need to try and find the contact it was converted to.</description>
         <name>Is_it_Converted</name>
         <label>Is it Converted?</label>
-        <locationX>3174</locationX>
+        <locationX>3636</locationX>
         <locationY>2051</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -473,7 +473,7 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
     <decisions>
         <name>Lead</name>
         <label>Lead?</label>
-        <locationX>3842</locationX>
+        <locationX>4304</locationX>
         <locationY>1943</locationY>
         <defaultConnector>
             <targetReference>B2C_or_B2B</targetReference>
@@ -498,7 +498,7 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
     <decisions>
         <name>Lead_Matched</name>
         <label>Lead Matched?</label>
-        <locationX>3702</locationX>
+        <locationX>4164</locationX>
         <locationY>2267</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -525,7 +525,7 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
     <decisions>
         <name>Opportunity</name>
         <label>Opportunity?</label>
-        <locationX>2002</locationX>
+        <locationX>2464</locationX>
         <locationY>863</locationY>
         <defaultConnector>
             <targetReference>Find_Case</targetReference>
@@ -601,6 +601,21 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
             </connector>
             <label>Pre-webinar</label>
         </rules>
+        <rules>
+            <name>Mid_funnel</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Calendly__UtmCampaign__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Mid-Funnel Campaign</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_Mid_funnel_CampaignId</targetReference>
+            </connector>
+            <label>Mid funnel</label>
+        </rules>
     </decisions>
     <decisions>
         <description>If we cannot find the system admin profile, we cannot find the system admin.  And if we&apos;re at this point in the logic, we have no other owner.
@@ -631,7 +646,7 @@ So there&apos;s no path forward if the profile is not found.</description>
         <description>What business process does this Calendly event relate to?</description>
         <name>Related_Business_Process</name>
         <label>Related Business Process</label>
-        <locationX>4956</locationX>
+        <locationX>5418</locationX>
         <locationY>2375</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -668,7 +683,7 @@ So there&apos;s no path forward if the profile is not found.</description>
     <decisions>
         <name>SFID_Provided</name>
         <label>SFID Provided?</label>
-        <locationX>4646</locationX>
+        <locationX>4993</locationX>
         <locationY>431</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -722,15 +737,15 @@ So there&apos;s no path forward if the profile is not found.</description>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.Calendly__EventTypeName__c</leftValueReference>
-                <operator>Contains</operator>
+                <operator>StartsWith</operator>
                 <rightValue>
-                    <stringValue>Interview</stringValue>
+                    <stringValue>Elevate Presenter Interview</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Application_Call_Scheduled</targetReference>
             </connector>
-            <label>Screening Call</label>
+            <label>SS Screening Call</label>
         </rules>
         <rules>
             <name>Interview</name>
@@ -739,20 +754,96 @@ So there&apos;s no path forward if the profile is not found.</description>
                 <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
-                    <stringValue>Interview - Zoom</stringValue>
+                    <stringValue>Elevate Presenter Interview - Zoom</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
                 <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
-                    <stringValue>Interview - In Person</stringValue>
+                    <stringValue>Elevate Presenter Interview - In Person</stringValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>Application_to_Interview_Scheduled</targetReference>
             </connector>
-            <label>Interview</label>
+            <label>SS Interview</label>
+        </rules>
+        <rules>
+            <name>Connect_Screening_Call</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Phone</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventTypeName__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Connect Presenter Interview</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Connect Screening Call</label>
+        </rules>
+        <rules>
+            <name>Connect_Interview</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Connect Presenter Interview - Zoom</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Connect Presenter Interview - In Person</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Connect Interview</label>
+        </rules>
+        <rules>
+            <name>Coach_Screening_Call</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Phone</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventTypeName__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Elevate Coach Interview</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Coach Screening Call</label>
+        </rules>
+        <rules>
+            <name>Coach_Interview</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate Coach Interview - Zoom</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventSubject__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate Coach Interview - In Person</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Coach Interview</label>
         </rules>
     </decisions>
     <decisions>
@@ -782,7 +873,7 @@ So there&apos;s no path forward if the profile is not found.</description>
         <description>Find the applicable application for the Candidate (may be an application for different roles, eg Study Skills Presenter, Connect Presenter, Student Coach)</description>
         <name>What_Position</name>
         <label>What Position?</label>
-        <locationX>4494</locationX>
+        <locationX>4956</locationX>
         <locationY>2483</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -884,6 +975,13 @@ So there&apos;s no path forward if the profile is not found.</description>
                     <stringValue>olivia@elevateeducation.com</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventPrimaryPublisherEmail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>alex.odonnell@elevateeducation.com</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Find_B2C_Owner_UK</targetReference>
             </connector>
@@ -905,7 +1003,12 @@ So there&apos;s no path forward if the profile is not found.</description>
             <label>b2c South Africa</label>
         </rules>
     </decisions>
-    <description>Updated B2C Lead pathway for UK (new question in Calendly)
+    <description>Updated logic for changing application status based on product family;
+Updated &apos;alex.odonnell@elevateeducation.com&apos; for UK B2C
+Tweaked Start Date/End Date criteria for mid funnel
+Tweaked mid funnel value to &quot;Mid-Funnel Campaign&quot;
+Updated Lead creation logic for mid funnel campaigns
+Updated B2C Lead pathway for UK (new question in Calendly)
 Updated B2C Lead pathway for AUS (new question in Calendly)
 Updated B2C Lead pathway for ZA
 Added Pre &amp; Post webinar logic based on UTM links. 
@@ -1446,7 +1549,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Find_Account</name>
         <label>Find Account</label>
-        <locationX>1499</locationX>
+        <locationX>1730</locationX>
         <locationY>539</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1574,7 +1677,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Find_Campaign</name>
         <label>Find Campaign</label>
-        <locationX>2912</locationX>
+        <locationX>3374</locationX>
         <locationY>1403</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1605,7 +1708,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Find_Case</name>
         <label>Find Case</label>
-        <locationX>2283</locationX>
+        <locationX>2745</locationX>
         <locationY>971</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1636,7 +1739,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Find_Contact</name>
         <label>Find Contact</label>
-        <locationX>3310</locationX>
+        <locationX>3772</locationX>
         <locationY>1619</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1667,7 +1770,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Find_Contract</name>
         <label>Find Contract</label>
-        <locationX>2581</locationX>
+        <locationX>3043</locationX>
         <locationY>1187</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1699,7 +1802,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>This lookup with find the converted contact, or set RecordId to null since the converted lead cannot be updated.</description>
         <name>Find_Converted_Contact</name>
         <label>Find Converted Contact</label>
-        <locationX>3042</locationX>
+        <locationX>3504</locationX>
         <locationY>2159</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1727,7 +1830,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Find_Lead</name>
         <label>Find Lead</label>
-        <locationX>3842</locationX>
+        <locationX>4304</locationX>
         <locationY>1835</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1764,9 +1867,77 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         </outputAssignments>
     </recordLookups>
     <recordLookups>
+        <description>Find CampaignId for the active b2c mid funnel campaign</description>
+        <name>Find_Mid_funnel_CampaignId</name>
+        <label>Find Mid funnel CampaignId</label>
+        <locationX>578</locationX>
+        <locationY>2387</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Which_b2c_SBU</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsActive</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Mid funnel</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>CurrentDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Product_Line__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Coaching</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ParentId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Business_Unit__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>BusinessUnit</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>EndDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>CurrentDate</elementReference>
+            </value>
+        </filters>
+        <object>Campaign</object>
+        <outputAssignments>
+            <assignToReference>CampaignId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordLookups>
         <name>Find_Opportunity</name>
         <label>Find Opportunity</label>
-        <locationX>2002</locationX>
+        <locationX>2464</locationX>
         <locationY>755</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1798,7 +1969,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Find CampaignId for the active b2c Webinar that is post webinar</description>
         <name>Find_PostWebinar_CampaignId</name>
         <label>Find PostWebinar CampaignId</label>
-        <locationX>182</locationX>
+        <locationX>50</locationX>
         <locationY>2387</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1866,7 +2037,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Find CampaignId for the active b2c Webinar that is pre webinar</description>
         <name>Find_PreWebinar_CampaignId</name>
         <label>Find PreWebinar CampaignId</label>
-        <locationX>446</locationX>
+        <locationX>314</locationX>
         <locationY>2387</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2034,7 +2205,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Find the Study Skills Application</description>
         <name>Match_Application</name>
         <label>Match Study Skills Application</label>
-        <locationX>4098</locationX>
+        <locationX>4560</locationX>
         <locationY>2591</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2067,7 +2238,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Match_Coach_Application</name>
         <label>Match Coach Application</label>
-        <locationX>4626</locationX>
+        <locationX>5088</locationX>
         <locationY>2591</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2101,7 +2272,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Find the Connect Presenter Application</description>
         <name>Match_Connect_Application</name>
         <label>Match Connect Application</label>
-        <locationX>4362</locationX>
+        <locationX>4824</locationX>
         <locationY>2591</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2134,7 +2305,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Match_Contact</name>
         <label>Match Contact</label>
-        <locationX>5319</locationX>
+        <locationX>5781</locationX>
         <locationY>2159</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2159,7 +2330,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     <recordLookups>
         <name>Match_Lead</name>
         <label>Match Lead</label>
-        <locationX>3702</locationX>
+        <locationX>4164</locationX>
         <locationY>2159</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2211,7 +2382,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Find the employee&apos;s Resource record</description>
         <name>Match_Resource</name>
         <label>Match Resource</label>
-        <locationX>5154</locationX>
+        <locationX>5616</locationX>
         <locationY>2483</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -2245,7 +2416,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Update Application Status to Call Scheduled</description>
         <name>Application_Call_Scheduled</name>
         <label>Application to Call Scheduled</label>
-        <locationX>864</locationX>
+        <locationX>336</locationX>
         <locationY>3287</locationY>
         <filterLogic>1 AND (2 OR 3 OR 4)  AND 5</filterLogic>
         <filters>
@@ -2295,7 +2466,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <description>Set Application status to Interview Scheduled</description>
         <name>Application_to_Interview_Scheduled</name>
         <label>Application to Interview Scheduled</label>
-        <locationX>1128</locationX>
+        <locationX>600</locationX>
         <locationY>3287</locationY>
         <filterLogic>1 AND (2 OR 3 OR 4) AND 5</filterLogic>
         <filters>
@@ -2343,7 +2514,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
     </recordUpdates>
     <sourceTemplate>Calendly__CreateEventTemplate</sourceTemplate>
     <start>
-        <locationX>6226</locationX>
+        <locationX>6630</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Is_invitee_created</targetReference>
