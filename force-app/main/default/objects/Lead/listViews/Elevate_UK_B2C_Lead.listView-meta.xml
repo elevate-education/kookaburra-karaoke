@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Elevate_UK_B2C_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Student_s_School_b2c__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Next_Activity_Date__c</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>Campaign__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>FULL_NAME</field>
+        <operation>notContain</operation>
+        <value>TEST</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Unqualified,Unsubscribed</value>
+    </filters>
+    <label>Elevate UK B2C</label>
+    <queue>Elevate_UK_B2C</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>
