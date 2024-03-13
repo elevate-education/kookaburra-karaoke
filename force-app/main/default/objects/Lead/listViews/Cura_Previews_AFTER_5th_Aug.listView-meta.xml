@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cura_Previews_AFTER_5th_Aug</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>cura_Start_Time__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>cura_End_Time__c</columns>
+    <columns>cura_UserID__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL_OPT_OUT</columns>
+    <columns>LEAD.DO_NOT_CALL</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Business_Unit__c</field>
+        <operation>equals</operation>
+        <value>Cura</value>
+    </filters>
+    <filters>
+        <field>cura_Start_Time__c</field>
+        <operation>greaterThan</operation>
+        <value>8/5/2023 12:00 AM</value>
+    </filters>
+    <label>Cura Previews since 5th Aug</label>
+    <sharedTo>
+        <roleAndSubordinates>Cura_HQ</roleAndSubordinates>
+        <roleAndSubordinates>Elevate_Services</roleAndSubordinates>
+    </sharedTo>
+</ListView>

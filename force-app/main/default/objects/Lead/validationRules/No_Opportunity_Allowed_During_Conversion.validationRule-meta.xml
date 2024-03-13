@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Opportunity_Allowed_During_Conversion</fullName>
+    <active>false</active>
+    <description>WDCi: stop user from creating opportunity upon conversion</description>
+    <errorConditionFormula>IsConverted &amp;&amp; NOT(ISBLANK( ConvertedOpportunityId ))</errorConditionFormula>
+    <errorMessage>You are not allowed to create opportunity during conversion. Please check the &apos;Do not create a new opportunity upon conversion&apos;.</errorMessage>
+</ValidationRule>
