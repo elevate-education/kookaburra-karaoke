@@ -786,6 +786,9 @@ So there&apos;s no path forward if the profile is not found.</description>
                     <stringValue>Connect Presenter Interview</stringValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Connect_Application_to_Call_Scheduled</targetReference>
+            </connector>
             <label>Connect Screening Call</label>
         </rules>
         <rules>
@@ -805,6 +808,9 @@ So there&apos;s no path forward if the profile is not found.</description>
                     <stringValue>Connect Presenter Interview - In Person</stringValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Connect_Application_to_Interview_Scheduled</targetReference>
+            </connector>
             <label>Connect Interview</label>
         </rules>
         <rules>
@@ -824,6 +830,9 @@ So there&apos;s no path forward if the profile is not found.</description>
                     <stringValue>Elevate Coach Interview</stringValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Coach_Application_to_Call_Scheduled</targetReference>
+            </connector>
             <label>Coach Screening Call</label>
         </rules>
         <rules>
@@ -843,6 +852,9 @@ So there&apos;s no path forward if the profile is not found.</description>
                     <stringValue>Elevate Coach Interview - In Person</stringValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Coach_Application_to_Interview_Scheduled</targetReference>
+            </connector>
             <label>Coach Interview</label>
         </rules>
     </decisions>
@@ -2467,6 +2479,206 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <name>Application_to_Interview_Scheduled</name>
         <label>Application to Interview Scheduled</label>
         <locationX>600</locationX>
+        <locationY>3287</locationY>
+        <filterLogic>1 AND (2 OR 3 OR 4) AND 5</filterLogic>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WhoRecordId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Call Scheduled</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Screened</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Split</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Interview Scheduled</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Application__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Application Status to Call Scheduled</description>
+        <name>Coach_Application_to_Call_Scheduled</name>
+        <label>Coach Application to Call Scheduled</label>
+        <locationX>1392</locationX>
+        <locationY>3287</locationY>
+        <filterLogic>1 AND (2 OR 3 OR 4)  AND 5</filterLogic>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WhoRecordId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Split</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Screened</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Call Scheduled</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Application__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Set Application status to Interview Scheduled</description>
+        <name>Coach_Application_to_Interview_Scheduled</name>
+        <label>Coach Application to Interview Scheduled</label>
+        <locationX>1656</locationX>
+        <locationY>3287</locationY>
+        <filterLogic>1 AND (2 OR 3 OR 4) AND 5</filterLogic>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WhoRecordId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Call Scheduled</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Screened</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Split</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Interview Scheduled</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Application__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Application Status to Call Scheduled</description>
+        <name>Connect_Application_to_Call_Scheduled</name>
+        <label>Connect Application to Call Scheduled</label>
+        <locationX>864</locationX>
+        <locationY>3287</locationY>
+        <filterLogic>1 AND (2 OR 3 OR 4)  AND 5</filterLogic>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>WhoRecordId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Split</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Screened</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Candidate_Contact__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Call Scheduled</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Application__c</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Set Application status to Interview Scheduled</description>
+        <name>Connect_Application_to_Interview_Scheduled</name>
+        <label>Connect Application to Interview Scheduled</label>
+        <locationX>1128</locationX>
         <locationY>3287</locationY>
         <filterLogic>1 AND (2 OR 3 OR 4) AND 5</filterLogic>
         <filters>
