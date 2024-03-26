@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Due_Date_Cannot_Edit</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+ ISCHANGED( Expected_Due_Date__c ), 
+OR(ISPICKVAL(Status , &apos;Closed - Resolved&apos;), ISPICKVAL(Status , &apos;Closed - Duplicate&apos;))
+
+)</errorConditionFormula>
+    <errorDisplayField>Expected_Due_Date__c</errorDisplayField>
+    <errorMessage>Closed Case cannot edit this field.</errorMessage>
+</ValidationRule>
