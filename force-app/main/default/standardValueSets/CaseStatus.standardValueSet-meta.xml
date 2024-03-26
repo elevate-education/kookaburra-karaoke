@@ -8,6 +8,12 @@
         <closed>false</closed>
     </standardValue>
     <standardValue>
+        <fullName>Backlog</fullName>
+        <default>false</default>
+        <label>Backlog</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
         <fullName>Pending</fullName>
         <default>false</default>
         <label>Pending (Customer)</label>
@@ -23,6 +29,12 @@
         <fullName>Working1</fullName>
         <default>false</default>
         <label>Working</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Validating</fullName>
+        <default>false</default>
+        <label>Validating</label>
         <closed>false</closed>
     </standardValue>
     <standardValue>

@@ -139,4 +139,16 @@
         <label>3rd Party Request</label>
         <cssExposed>false</cssExposed>
     </standardValue>
+    <standardValue>
+        <fullName>User Education</fullName>
+        <default>false</default>
+        <label>User Education</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Maintenance Activity</fullName>
+        <default>false</default>
+        <label>Maintenance Activity</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
 </StandardValueSet>
