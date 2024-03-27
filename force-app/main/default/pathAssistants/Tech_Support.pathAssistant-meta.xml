@@ -5,26 +5,50 @@
     <fieldName>Status</fieldName>
     <masterLabel>Tech Support</masterLabel>
     <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Expected_Due_Date__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Case is not being actively worked. &lt;/strong&gt;Will be prioritised in due course. &lt;/p&gt;</info>
+        <picklistValueName>Backlog</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
         <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Existing case has been created with same concern from same Affected User.&lt;/strong&gt;&lt;/p&gt;</info>
         <picklistValueName>Closed - Duplicate</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
         <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Affected user has confirmed the issue has been resolved. &lt;/strong&gt;&lt;/p&gt;</info>
         <picklistValueName>Closed - Resolved</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Expected_Due_Date__c</fieldNames>
         <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;New Case, no action taken.&lt;/strong&gt;&lt;/p&gt;</info>
         <picklistValueName>New</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Expected_Due_Date__c</fieldNames>
         <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 13px; font-family: lato, sans-serif;&quot;&gt;Not being actively worked on. &lt;/strong&gt;&lt;span style=&quot;font-size: 13px; font-family: lato, sans-serif;&quot;&gt;See details in Chatter feed.&lt;/span&gt;&lt;/p&gt;</info>
         <picklistValueName>On Hold</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Expected_Due_Date__c</fieldNames>
+        <fieldNames>Pending_Reason__c</fieldNames>
+        <fieldNames>External_Ticket_Id__c</fieldNames>
         <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-family: lato, sans-serif; font-size: 13px;&quot;&gt;Waiting on action/further information from affected user(s). &lt;/strong&gt;&lt;span style=&quot;font-family: lato, sans-serif; font-size: 13px;&quot;&gt;See Chatter &amp;amp; Activity tab for details.&lt;/span&gt;&lt;/p&gt;</info>
         <picklistValueName>Pending1</picklistValueName>
     </pathAssistantSteps>
     <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Expected_Due_Date__c</fieldNames>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;em&gt;Case creator to validate issue has been resolved&lt;/em&gt;&lt;/strong&gt;&lt;em style=&quot;font-size: 14px;&quot;&gt; (before case is Closed)&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Validating</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Priority</fieldNames>
+        <fieldNames>Expected_Due_Date__c</fieldNames>
         <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 13px; font-family: lato, sans-serif;&quot;&gt;Work In Progress.&lt;/strong&gt;&lt;span style=&quot;font-size: 13px; font-family: lato, sans-serif;&quot;&gt; See updates in the Chatter feed.&lt;/span&gt;&lt;/p&gt;</info>
         <picklistValueName>Working1</picklistValueName>
     </pathAssistantSteps>

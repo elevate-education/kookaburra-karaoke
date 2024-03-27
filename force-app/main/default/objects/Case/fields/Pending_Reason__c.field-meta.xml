@@ -13,19 +13,24 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Waiting for external party</fullName>
+                <fullName>Waiting for External Party</fullName>
                 <default>false</default>
-                <label>Waiting for external party</label>
+                <label>Waiting for External Party</label>
             </value>
             <value>
-                <fullName>Waiting for internal support</fullName>
+                <fullName>Waiting for Internal Support</fullName>
                 <default>false</default>
-                <label>Waiting for internal support</label>
+                <label>Waiting for Internal Support</label>
             </value>
             <value>
-                <fullName>Waiting for date</fullName>
+                <fullName>Waiting for Date</fullName>
                 <default>false</default>
-                <label>Waiting for date</label>
+                <label>Waiting for Date</label>
+            </value>
+            <value>
+                <fullName>Waiting for Customer</fullName>
+                <default>false</default>
+                <label>Waiting for Customer</label>
             </value>
         </valueSetDefinition>
     </valueSet>

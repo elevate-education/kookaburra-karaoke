@@ -32,12 +32,6 @@
         <closed>false</closed>
     </standardValue>
     <standardValue>
-        <fullName>Validating</fullName>
-        <default>false</default>
-        <label>Validating</label>
-        <closed>false</closed>
-    </standardValue>
-    <standardValue>
         <fullName>Pending1</fullName>
         <default>false</default>
         <label>Pending</label>
@@ -47,6 +41,12 @@
         <fullName>On Hold</fullName>
         <default>false</default>
         <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Validating</fullName>
+        <default>false</default>
+        <label>Validating</label>
         <closed>false</closed>
     </standardValue>
     <standardValue>
