@@ -118,12 +118,19 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.RecordTypeId</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>012I80000004IfJIAU</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>012Mo000001oAd7IAE</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -427,7 +434,8 @@
             <label>Yes, Diagnostic Done</label>
         </rules>
     </decisions>
-    <description>Latest - Add No to &quot;Is B2C Opp Decision; Update related Primary Contact&apos;s Trial Start and End Dates
+    <description>Latest - Include new record type &apos;B2C RMHC&apos; to the decision element;
+Add No to &quot;Is B2C Opp Decision; Update related Primary Contact&apos;s Trial Start and End Dates
 Exclude Upsell Opps from sending emails to consultants;
 Exclude Debrief populated Opps from sending emails to consultants &amp; Email to Parent removed;
 Email to Parent after Diagnostic Notes are added.

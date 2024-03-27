@@ -81,7 +81,7 @@
         </rules>
         <rules>
             <name>AUS_Owned_Lead</name>
-            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
                 <operator>Contains</operator>
@@ -103,6 +103,13 @@
                     <stringValue>Coaching</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate AUS</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>AUS</targetReference>
             </connector>
@@ -110,7 +117,7 @@
         </rules>
         <rules>
             <name>UK_Owned_Lead</name>
-            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
                 <operator>Contains</operator>
@@ -132,6 +139,13 @@
                     <stringValue>Coaching</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate UK</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>UK</targetReference>
             </connector>
@@ -139,7 +153,7 @@
         </rules>
         <rules>
             <name>ZA_Owned_Lead</name>
-            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
                 <operator>Contains</operator>
@@ -161,6 +175,13 @@
                     <stringValue>Coaching</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>SouthAfrica</targetReference>
             </connector>
@@ -168,7 +189,7 @@
         </rules>
         <rules>
             <name>NY_Owned_Lead</name>
-            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
                 <operator>Contains</operator>
@@ -188,6 +209,13 @@
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate USA</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -241,7 +269,8 @@
             <label>Created by ZA B2C</label>
         </rules>
     </decisions>
-    <description>Latest: Updated &apos;Created by Mailshake Integration User?&apos;and &apos;Identify the owning Business Unit&apos; to capture records created by Integration Users/ Delete Update Owner in Default Outcome - update alias from &quot;integ&quot; to &quot;einte&quot;
+    <description>Latest: Updated &apos;Identify BU&apos; decision element to pick up BU based on owner role name;
+Updated &apos;Created by Mailshake Integration User?&apos;and &apos;Identify the owning Business Unit&apos; to capture records created by Integration Users/ Delete Update Owner in Default Outcome - update alias from &quot;integ&quot; to &quot;einte&quot;
 Manually created B2C Leads assigned with corresponding BU. Excluded conditional trigger: Product Interest &lt;&gt; Coaching;
 Added filters across the board so that b2c Leads will not be addressed by this flow - including a conditional trigger: Product Interest &lt;&gt; Coaching (b2c Leads will be created via a separate Calendly flow).</description>
     <environments>Default</environments>
