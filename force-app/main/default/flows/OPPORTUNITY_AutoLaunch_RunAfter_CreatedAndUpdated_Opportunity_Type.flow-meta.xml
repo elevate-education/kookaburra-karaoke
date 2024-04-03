@@ -4,7 +4,7 @@
         <name>Send_Diagnostic_Booked_email_to_Consultant</name>
         <label>Send Diagnostic Booked email to Consultant</label>
         <locationX>182</locationX>
-        <locationY>647</locationY>
+        <locationY>947</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -57,7 +57,7 @@
         <name>Send_Handover_email_to_Consultant</name>
         <label>Send Handover report email to Consultant</label>
         <locationX>974</locationX>
-        <locationY>863</locationY>
+        <locationY>1163</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -134,7 +134,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Status_changed</targetReference>
+                <targetReference>Student_Account_Added</targetReference>
             </connector>
             <label>Yes</label>
         </rules>
@@ -158,7 +158,7 @@
         <name>Debrief</name>
         <label>Debrief Activity kicked off?</label>
         <locationX>842</locationX>
-        <locationY>755</locationY>
+        <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Send_Handover_email_to_Consultant</targetReference>
         </defaultConnector>
@@ -236,7 +236,7 @@
         <name>Debrief_Activity_kicked_off</name>
         <label>Debrief Activity kicked off?</label>
         <locationX>50</locationX>
-        <locationY>539</locationY>
+        <locationY>839</locationY>
         <defaultConnector>
             <targetReference>Send_Diagnostic_Booked_email_to_Consultant</targetReference>
         </defaultConnector>
@@ -314,7 +314,7 @@
         <name>Diagnostic_already_created</name>
         <label>Diagnostic already created</label>
         <locationX>842</locationX>
-        <locationY>647</locationY>
+        <locationY>947</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_D</name>
@@ -348,7 +348,7 @@
         <name>Status_changed</name>
         <label>Status changed?</label>
         <locationX>908</locationX>
-        <locationY>431</locationY>
+        <locationY>731</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_DiagnosticBooked</name>
@@ -434,7 +434,42 @@
             <label>Yes, Diagnostic Done</label>
         </rules>
     </decisions>
-    <description>Latest - Include new record type &apos;B2C RMHC&apos; to the decision element;
+    <decisions>
+        <description>Check if a student account has been just added</description>
+        <name>Student_Account_Added</name>
+        <label>Student Account Added &amp; Not created from Lead?</label>
+        <locationX>908</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Status_changed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Stud</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Student__c</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Created_from_lead__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opp_Year_Level_with_Student_Year_Level</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Latest - Opp.Year Level to be updated when Opp.Student is added;
+Include new record type &apos;B2C RMHC&apos; to the decision element;
 Add No to &quot;Is B2C Opp Decision; Update related Primary Contact&apos;s Trial Start and End Dates
 Exclude Upsell Opps from sending emails to consultants;
 Exclude Debrief populated Opps from sending emails to consultants &amp; Email to Parent removed;
@@ -479,7 +514,7 @@ B2C automated email to Consultant when Diagnostic is booked.</description>
         <name>Get_Diagnostic_records</name>
         <label>Get Diagnostic records</label>
         <locationX>842</locationX>
-        <locationY>539</locationY>
+        <locationY>839</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Diagnostic_already_created</targetReference>
@@ -500,7 +535,7 @@ B2C automated email to Consultant when Diagnostic is booked.</description>
         <name>Get_Related_Files</name>
         <label>Get Related Files</label>
         <locationX>1502</locationX>
-        <locationY>647</locationY>
+        <locationY>947</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <filterLogic>and</filterLogic>
         <filters>
@@ -526,7 +561,7 @@ B2C automated email to Consultant when Diagnostic is booked.</description>
         <name>Tick_Diagnostic_Run_checkbox</name>
         <label>Tick &apos;Diagnostic Run&apos; checkbox</label>
         <locationX>1502</locationX>
-        <locationY>539</locationY>
+        <locationY>839</locationY>
         <connector>
             <targetReference>Get_Related_Files</targetReference>
         </connector>
@@ -534,6 +569,23 @@ B2C automated email to Consultant when Diagnostic is booked.</description>
             <field>Diagnostic_Run_b2c__c</field>
             <value>
                 <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Copy &quot;Year Level (Initial Contact)&quot; from Student account and paste on Opp.</description>
+        <name>Update_Opp_Year_Level_with_Student_Year_Level</name>
+        <label>Update Opp.Year Level with Student.Year Level</label>
+        <locationX>776</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Status_changed</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Year_Level_Initial_Contact__c</field>
+            <value>
+                <elementReference>$Record.Student__r.Student_Year_Level__c</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
