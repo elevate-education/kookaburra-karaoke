@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_Level_Current__c</fullName>
+    <description>ARCHIVED. Replaced by formula field of the same label.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>ARCHIVED. Replaced by formula field of the same label. Person Accounts Only. Student&apos;s current year level.</inlineHelpText>
+    <label>ARCHIVED_Year Level (Current)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Year_Level</valueSetName>
+    </valueSet>
+</CustomField>

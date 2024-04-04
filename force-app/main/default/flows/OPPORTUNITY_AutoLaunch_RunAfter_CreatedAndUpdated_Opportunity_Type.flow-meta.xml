@@ -449,7 +449,7 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Student__c</leftValueReference>
-                <operator>WasSet</operator>
+                <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
@@ -464,7 +464,6 @@
             <connector>
                 <targetReference>Update_Opp_Year_Level_with_Student_Year_Level</targetReference>
             </connector>
-            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
             <label>Yes</label>
         </rules>
     </decisions>
