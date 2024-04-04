@@ -88,6 +88,23 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Job_Assignment_Region__c</fieldItem>
+                <identifier>RecordJob_Assignment_Region_cField2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Person</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Student_Year_Level__c</fieldItem>
                 <identifier>RecordStudent_Year_Level_cField</identifier>
                 <visibilityRule>
@@ -107,6 +124,13 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Year_Level_Current_New__c</fieldItem>
                 <identifier>RecordYear_Level_Current_New_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Student</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
