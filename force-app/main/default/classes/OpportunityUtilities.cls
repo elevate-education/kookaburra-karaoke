@@ -11,24 +11,22 @@ public without sharing class OpportunityUtilities {
         List<OpportunityContactRole> roles = [ 
             SELECT id, contactid, isprimary, opportunityid 
             FROM OpportunityContactRole 
-            WHERE opportunityid IN :newOpps AND Opportunity.PBL_Opp__c != true ];
+            WHERE opportunityid IN :newOpps];
 
         Map<Id, List<OpportunityContactRole>> oppIdToRoles = new Map<Id, List<OpportunityContactRole>>();
 
         for(Opportunity opp :newOpps) {
-            if(!opp.PBL_Opp__c) { //exclude cura opps
-                List<OpportunityContactRole> ocrs = new List<OpportunityContactRole>();
-                for(OpportunityContactRole ocr :roles) {
-                    if(ocr.opportunityid == opp.Id) {
-                        ocrs.add(ocr);
-                    }
+            List<OpportunityContactRole> ocrs = new List<OpportunityContactRole>();
+            for(OpportunityContactRole ocr :roles) {
+                if(ocr.opportunityid == opp.Id) {
+                    ocrs.add(ocr);
                 }
-                oppIdToRoles.put(opp.Id, ocrs);
             }
+            oppIdToRoles.put(opp.Id, ocrs);
         }
 
         for(Opportunity opp :newOpps) {
-            if(!opp.PBL_Opp__c) { //exclude cura opps                
+            if(!opp.PBL_Opp__c) { //exclude cura opps from this flow              
                 if(oppIdToRoles.get(opp.Id).isEmpty() && opp.Primary_Contact__c != null) { //no roles and has a primary contact, add one
                     OpportunityContactRole role = new OpportunityContactRole(
                         ContactId = opp.Primary_Contact__c,
@@ -61,6 +59,22 @@ public without sharing class OpportunityUtilities {
                         newRoles.add(role);
                     }
                 }
+            }
+            else {
+                if(oppIdToRoles.get(opp.Id).isEmpty() && opp.Primary_Contact__c != null) { //if no role and we have a primary ct, create
+                    OpportunityContactRole role = new OpportunityContactRole(
+                            ContactId = opp.Primary_Contact__c,
+                            OpportunityId = opp.Id,
+                            Role = 'Teacher',
+                            isPrimary = true
+                        );
+                        newRoles.add(role);
+                }
+                if(!oppIdToRoles.get(opp.Id).isEmpty() && opp.Primary_Contact__c != null) { //if a role, update
+                    List<OpportunityContactRole> existingRoles = oppIdToRoles.get(opp.Id); //will only be one
+                    existingRoles[0].ContactId = opp.Primary_Contact__c;
+                    newRoles.add(existingRoles[0]);
+                }                
             }
         }
         if(!newRoles.isEmpty()) {
