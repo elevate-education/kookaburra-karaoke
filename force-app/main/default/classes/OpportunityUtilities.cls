@@ -8,8 +8,10 @@ public without sharing class OpportunityUtilities {
     public static void syncPrimaryContact(List<Opportunity> newOpps) {
         
         List<OpportunityContactRole> newRoles = new List<OpportunityContactRole>();
+        List<OpportunityContactRole> toDelete = new List<OpportunityContactRole>();
+
         List<OpportunityContactRole> roles = [ 
-            SELECT id, contactid, isprimary, opportunityid 
+            SELECT id, contactid, isprimary, opportunityid, role
             FROM OpportunityContactRole 
             WHERE opportunityid IN :newOpps];
 
@@ -72,12 +74,28 @@ public without sharing class OpportunityUtilities {
                 }
                 if(!oppIdToRoles.get(opp.Id).isEmpty() && opp.Primary_Contact__c != null) { //if a role, update
                     List<OpportunityContactRole> existingRoles = oppIdToRoles.get(opp.Id); //will only be one
-                    existingRoles[0].ContactId = opp.Primary_Contact__c;
-                    newRoles.add(existingRoles[0]);
+                    if(existingRoles.size() == 1 && 
+                       existingRoles[0].Role == 'Teacher' && 
+                       existingRoles[0].ContactId != opp.Primary_Contact__c) { //update
+                           existingRoles[0].ContactId = opp.Primary_Contact__c;
+                           newRoles.add(existingRoles[0]);
+                    }
+                    else { //delete and recreate
+                        toDelete.addAll(existingRoles);
+                        OpportunityContactRole role = new OpportunityContactRole(
+                            ContactId = opp.Primary_Contact__c,
+                            OpportunityId = opp.Id,
+                            Role = 'Teacher',
+                            isPrimary = true
+                        );
+                        newRoles.add(role); 
+                    }
+        
                 }                
             }
         }
         if(!newRoles.isEmpty()) {
+            delete toDelete;
             upsert newRoles;
         }
 
