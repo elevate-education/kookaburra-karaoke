@@ -80,150 +80,6 @@
             <label>Cura Owned Lead</label>
         </rules>
         <rules>
-            <name>AUS_Owned_Lead</name>
-            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Australia</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>einte</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Coaching</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Elevate AUS</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>AUS</targetReference>
-            </connector>
-            <label>AUS Owned Lead</label>
-        </rules>
-        <rules>
-            <name>UK_Owned_Lead</name>
-            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>UK</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ukuser</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Coaching</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Elevate UK</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>UK</targetReference>
-            </connector>
-            <label>UK Owned Lead</label>
-        </rules>
-        <rules>
-            <name>ZA_Owned_Lead</name>
-            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Africa</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>zauser</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Coaching</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Elevate South Africa</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>SouthAfrica</targetReference>
-            </connector>
-            <label>ZA Owned Lead</label>
-        </rules>
-        <rules>
-            <name>NY_Owned_Lead</name>
-            <conditionLogic>(1 OR 2 OR 4) AND 3</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>NY</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ususer</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Coaching</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Elevate USA</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>USA</targetReference>
-            </connector>
-            <label>NY Owned Lead</label>
-        </rules>
-        <rules>
             <name>Created_by_AUS_B2C</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
@@ -268,8 +124,181 @@
             </connector>
             <label>Created by ZA B2C</label>
         </rules>
+        <rules>
+            <name>AUS_Owned_Lead</name>
+            <conditionLogic>(1 OR 2 OR 4 OR 5) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Australia</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>einte</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate AUS</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate Australia</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AUS</targetReference>
+            </connector>
+            <label>AUS Owned Lead</label>
+        </rules>
+        <rules>
+            <name>UK_Owned_Lead</name>
+            <conditionLogic>(1 OR 2 OR 4 OR 5) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>UK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ukuser</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate UK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate UK</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>UK</targetReference>
+            </connector>
+            <label>UK Owned Lead</label>
+        </rules>
+        <rules>
+            <name>ZA_Owned_Lead</name>
+            <conditionLogic>(1 OR 2 OR 4 OR 5) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>zauser</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SouthAfrica</targetReference>
+            </connector>
+            <label>ZA Owned Lead</label>
+        </rules>
+        <rules>
+            <name>NY_Owned_Lead</name>
+            <conditionLogic>(1 OR 2 OR 4 OR 5) AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>NY</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Alias</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ususer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Interest__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Coaching</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.UserRole.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Elevate USA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate USA</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>USA</targetReference>
+            </connector>
+            <label>NY Owned Lead</label>
+        </rules>
     </decisions>
-    <description>Latest: Updated &apos;Identify BU&apos; decision element to pick up BU based on owner role name;
+    <description>Latest: Fixed B2C leads being updated with B2B BU (Updated &apos;Identify BU&apos; decision element to pick up BU based on owner BU);
+Updated &apos;Identify BU&apos; decision element to pick up BU based on owner role name;
 Updated &apos;Created by Mailshake Integration User?&apos;and &apos;Identify the owning Business Unit&apos; to capture records created by Integration Users/ Delete Update Owner in Default Outcome - update alias from &quot;integ&quot; to &quot;einte&quot;
 Manually created B2C Leads assigned with corresponding BU. Excluded conditional trigger: Product Interest &lt;&gt; Coaching;
 Added filters across the board so that b2c Leads will not be addressed by this flow - including a conditional trigger: Product Interest &lt;&gt; Coaching (b2c Leads will be created via a separate Calendly flow).</description>
@@ -298,7 +327,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>AUS</name>
         <label>Update Business Unit to Elevate Australia</label>
-        <locationX>314</locationX>
+        <locationX>1106</locationX>
         <locationY>839</locationY>
         <connector>
             <targetReference>Update_Owner_if_unassigned_to_Queue_yet</targetReference>
@@ -314,7 +343,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>ElevateAustraliaCoaching</name>
         <label>Update Business Unit to Elevate AUS Coaching</label>
-        <locationX>1370</locationX>
+        <locationX>314</locationX>
         <locationY>839</locationY>
         <inputAssignments>
             <field>Business_Unit__c</field>
@@ -333,7 +362,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>ElevateUKCoaching</name>
         <label>Update Business Unit to Elevate UK Coaching</label>
-        <locationX>1634</locationX>
+        <locationX>578</locationX>
         <locationY>839</locationY>
         <inputAssignments>
             <field>Business_Unit__c</field>
@@ -352,7 +381,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>ElevateZACoaching</name>
         <label>Update Business Unit to Elevate ZA Coaching</label>
-        <locationX>1898</locationX>
+        <locationX>842</locationX>
         <locationY>839</locationY>
         <inputAssignments>
             <field>Business_Unit__c</field>
@@ -371,7 +400,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>SouthAfrica</name>
         <label>Update Business Unit to Elevate South Africa</label>
-        <locationX>842</locationX>
+        <locationX>1634</locationX>
         <locationY>839</locationY>
         <connector>
             <targetReference>ZA_Update_Owner</targetReference>
@@ -404,7 +433,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>UK</name>
         <label>Update Business Unit to Elevate UK</label>
-        <locationX>578</locationX>
+        <locationX>1370</locationX>
         <locationY>839</locationY>
         <connector>
             <targetReference>UK_Update_Owner</targetReference>
@@ -420,7 +449,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>UK_Update_Owner</name>
         <label>Update Owner if unassigned to Queue yet</label>
-        <locationX>578</locationX>
+        <locationX>1370</locationX>
         <locationY>947</locationY>
         <inputAssignments>
             <field>OwnerId</field>
@@ -508,7 +537,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>Update_Owner_if_unassigned_to_Queue_yet</name>
         <label>Update Owner if unassigned to Queue yet</label>
-        <locationX>314</locationX>
+        <locationX>1106</locationX>
         <locationY>947</locationY>
         <inputAssignments>
             <field>OwnerId</field>
@@ -521,7 +550,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>US_Update_Owner</name>
         <label>Update Owner if unassigned to Queue yet</label>
-        <locationX>1106</locationX>
+        <locationX>1898</locationX>
         <locationY>947</locationY>
         <inputAssignments>
             <field>OwnerId</field>
@@ -534,7 +563,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>USA</name>
         <label>Update Business Unit to Elevate USA</label>
-        <locationX>1106</locationX>
+        <locationX>1898</locationX>
         <locationY>839</locationY>
         <connector>
             <targetReference>US_Update_Owner</targetReference>
@@ -550,7 +579,7 @@ Added filters across the board so that b2c Leads will not be addressed by this f
     <recordUpdates>
         <name>ZA_Update_Owner</name>
         <label>Update Owner if unassigned to Queue yet</label>
-        <locationX>842</locationX>
+        <locationX>1634</locationX>
         <locationY>947</locationY>
         <inputAssignments>
             <field>OwnerId</field>
