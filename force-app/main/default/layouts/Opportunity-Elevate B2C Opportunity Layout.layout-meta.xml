@@ -555,11 +555,13 @@
         <relatedList>Diagnostic__c.Opportunity__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>Session_Number__c</fields>
         <fields>NAME</fields>
         <fields>Topic__c</fields>
         <fields>Skill__c</fields>
+        <fields>CREATED_DATE</fields>
         <relatedList>Session__c.Opportunity__c</relatedList>
+        <sortField>CREATED_DATE</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>CASES.CASE_NUMBER</fields>
