@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Admin_Status__c</fullName>
+    <description>Overall status of new employee forms, supporting documents and acceptance of company policies</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+  YEAR(DATEVALUE(CreatedDate)) &lt; 2022, 
+  &apos;Completed&apos;, 
+
+   IF ( sked__Is_Active__c = FALSE, &apos;Exited&apos;,
+
+   IF( ISPICKVAL( Business_Unit__c , &apos;Elevate UK&apos;) , 
+
+       IF(
+
+AND(
+TEXT(New_Employee_Forms__c) = &apos;Completed&apos;,
+TEXT(ID__c) = &apos;Completed&apos;,
+TEXT(Super_Forms__c) = &apos;Not&apos;,
+OR(TEXT(Work_Visa_Form__c) = &apos;Valid&apos;, TEXT(Work_Visa_Form__c) = &apos;Not&apos;),
+
+Presenter_Policy__c = TRUE,
+Code_of_Conduct__c = TRUE
+),
+&apos;Completed&apos;, 
+&apos;In Progress&apos;), 
+
+ IF(
+
+AND(
+TEXT(New_Employee_Forms__c) = &apos;Completed&apos;,
+TEXT(ID__c) = &apos;Completed&apos;,
+OR(TEXT(Super_Forms__c) = &apos;Completed&apos;, TEXT(Super_Forms__c) = &apos;Follow-up&apos;),
+OR(TEXT(Work_Visa_Form__c) = &apos;Valid&apos;, TEXT(Work_Visa_Form__c) = &apos;Not&apos;),
+OR(TEXT(Working_w_Childrens_Check__c) = &apos;Active&apos;,TEXT(Working_w_Childrens_Check__c) = &apos;Followup Required&apos;), 
+OR(TEXT(Appendix_11_Form__c) = &apos;Completed&apos;, TEXT(Appendix_11_Form__c) = &apos;Not&apos;),
+OR(TEXT(Child_Related_Work_Form__c) = &apos;Completed&apos;, TEXT(Child_Related_Work_Form__c) = &apos;Not&apos;),
+OR(TEXT(Police_check__c) = &apos;Completed&apos;, TEXT(Police_check__c) = &apos;Not&apos;),
+
+OR(Presenter_Policy__c = TRUE,  Contact_Exchange_Consent__c = TRUE),
+Code_of_Conduct__c = TRUE,
+Casual_Employment_Statement__c = TRUE, 
+Fair_Work_Information_Statement__c = TRUE
+),
+&apos;Completed&apos;, 
+
+IF (
+AND(
+TEXT(New_Employee_Forms__c) = &apos;Completed&apos;,
+TEXT(ID__c) = &apos;Completed&apos;,
+OR(TEXT(Super_Forms__c) = &apos;Completed&apos;, TEXT(Super_Forms__c) = &apos;Follow-up&apos;),
+OR(TEXT(Work_Visa_Form__c) = &apos;Valid&apos;, TEXT(Work_Visa_Form__c) = &apos;Not&apos;),
+OR(TEXT(Working_w_Childrens_Check__c) = &apos;Approved awaiting card&apos;), 
+OR(TEXT(Appendix_11_Form__c) = &apos;Completed&apos;, TEXT(Appendix_11_Form__c) = &apos;Not&apos;),
+OR(TEXT(Child_Related_Work_Form__c) = &apos;Completed&apos;, TEXT(Child_Related_Work_Form__c) = &apos;Not&apos;),
+OR(TEXT(Police_check__c) = &apos;Completed&apos;, TEXT(Police_check__c) = &apos;Not&apos;),
+
+OR(Presenter_Policy__c = TRUE, Contact_Exchange_Consent__c = TRUE),
+Code_of_Conduct__c = TRUE,
+Casual_Employment_Statement__c = TRUE, 
+Fair_Work_Information_Statement__c = TRUE,
+Child_Safety_Code_of_Conduct__c  = TRUE
+),
+&apos;Completed (no card)&apos;,
+
+&apos;In Progress&apos;)))))</formula>
+    <inlineHelpText>Overall status of new employee forms, supporting documents and acceptance of company policies</inlineHelpText>
+    <label>Onboarding Admin Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
