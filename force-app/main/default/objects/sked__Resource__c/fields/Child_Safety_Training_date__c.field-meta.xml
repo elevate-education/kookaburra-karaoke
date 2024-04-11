@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Child_Safety_Training_date__c</fullName>
+    <description>Date of Completion of Child Safety Litmos Training</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date of Completion of Child Safety Litmos Training</inlineHelpText>
+    <label>Child Safety Training date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>
