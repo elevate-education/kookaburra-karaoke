@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Type__c</fullName>
+    <description>Indicator to differentiate Parent, Staff, Student &amp; other workshops</description>
+    <externalId>false</externalId>
+    <formula>IF(AND( RecordType.Name = &quot;Connect&quot;, Has_Presenter_Led__c = 0),&quot;Notes&quot;,
+IF(AND( RecordType.Name = &quot;Connect&quot;, Has_Presenter_Led__c &gt; 0),&quot;Workshop&quot;,
+IF( Total_Seminar__c = Has_Parent__c , &quot;Parent Workshops Only&quot;,
+IF(Total_Seminar__c = Has_Staff_Workshops__c , &quot;Staff Workshops Only&quot;,
+IF (Total_Seminar__c = Has_Student_Workshops__c, &quot;Student Workshops Only&quot;,
+&quot;Mix of Workshops&quot;))) ))</formula>
+    <label>Booking Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
