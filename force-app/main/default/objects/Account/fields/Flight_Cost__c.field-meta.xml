@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Flight_Cost__c</fullName>
     <externalId>false</externalId>
-    <label>Flight Fee</label>
+    <label>Flight Cost</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>
