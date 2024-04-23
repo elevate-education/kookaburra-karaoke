@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Taxi_Cost__c</fullName>
     <externalId>false</externalId>
-    <label>Taxi Fee</label>
+    <label>Taxi Cost</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>
