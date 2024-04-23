@@ -3,7 +3,7 @@
     <fullName>Overnight_Cost__c</fullName>
     <externalId>false</externalId>
     <inlineHelpText>Hotel + stipend</inlineHelpText>
-    <label>Overnight Cost</label>
+    <label>Overnight Fee</label>
     <precision>18</precision>
     <required>false</required>
     <scale>2</scale>
