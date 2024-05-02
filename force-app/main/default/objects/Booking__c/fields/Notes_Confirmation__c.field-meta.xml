@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes_Confirmation__c</fullName>
+    <externalId>false</externalId>
+    <formula>Program__r.Notes_Confirmation__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Based on program object. Used in &apos;Program Notes Confirmation&apos; email templates (Connect)</inlineHelpText>
+    <label>Program Notes Confirmation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
