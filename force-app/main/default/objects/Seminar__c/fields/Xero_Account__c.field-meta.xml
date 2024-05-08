@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Xero_Account__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(Name, &apos;Manual&apos;) , &apos;4200001 - Manual Revenue&apos;,  
+ IF(CONTAINS(Name, &apos;Travel Fee&apos;) , &apos;4002001 - Travel Revenue&apos;, 
+  IF(CONTAINS(Name, &apos;Travel&apos;) , &apos;4002001 - Travel Revenue&apos;,
+   IF( Product_Line__c &lt;&gt; &apos;PBL&apos; , &apos;4001001 - Seminar Revenue&apos;, 
+   IF(  AND(Product_Line__c = &apos;PBL&apos;, Product_Type_2__c  = &apos;Presenter Led&apos;) , &apos;4100250 - STEM PBL Teacher Training&apos;,
+    IF(  AND(Product_Line__c = &apos;PBL&apos;, Product_Type_2__c   &lt;&gt;  &apos;Presenter Led&apos;) , &apos;4100200 - STEM PBL Revenue&apos;,
+&apos;0&apos;))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Xero Account</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
