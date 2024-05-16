@@ -1022,7 +1022,8 @@ So there&apos;s no path forward if the profile is not found.</description>
             <label>b2c South Africa</label>
         </rules>
     </decisions>
-    <description>Added &apos;dylan.nedft@elevateeducation.com&apos; for ZA B2C;
+    <description>Updated to include mobile phone number for ZA B2C;
+Added &apos;dylan.nedft@elevateeducation.com&apos; for ZA B2C;
 Updated logic for changing application status based on product family;
 Updated &apos;alex.odonnell@elevateeducation.com&apos; for UK B2C
 Tweaked Start Date/End Date criteria for mid funnel
@@ -1489,7 +1490,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>MobilePhone</field>
             <value>
-                <elementReference>$Record.Calendly__Location__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse5__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
