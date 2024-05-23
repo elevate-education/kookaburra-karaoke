@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Reason__c</fullName>
+    <label>Sub Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reason</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Performance/quality</fullName>
+                <default>false</default>
+                <label>Performance/quality</label>
+            </value>
+            <value>
+                <fullName>Professionalism</fullName>
+                <default>false</default>
+                <label>Professionalism</label>
+            </value>
+            <value>
+                <fullName>Punctuality</fullName>
+                <default>false</default>
+                <label>Punctuality</label>
+            </value>
+            <value>
+                <fullName>Illness</fullName>
+                <default>false</default>
+                <label>Illness</label>
+            </value>
+            <value>
+                <fullName>Content</fullName>
+                <default>false</default>
+                <label>Content</label>
+            </value>
+            <value>
+                <fullName>Materials</fullName>
+                <default>false</default>
+                <label>Materials</label>
+            </value>
+            <value>
+                <fullName>Presenter numbers</fullName>
+                <default>false</default>
+                <label>Presenter numbers</label>
+            </value>
+            <value>
+                <fullName>Roster issue</fullName>
+                <default>false</default>
+                <label>Roster issue</label>
+            </value>
+            <value>
+                <fullName>Workshop scheduling</fullName>
+                <default>false</default>
+                <label>Workshop scheduling</label>
+            </value>
+            <value>
+                <fullName>Printing</fullName>
+                <default>false</default>
+                <label>Printing</label>
+            </value>
+            <value>
+                <fullName>Tech bug</fullName>
+                <default>false</default>
+                <label>Tech bug</label>
+            </value>
+            <value>
+                <fullName>Video conferencing</fullName>
+                <default>false</default>
+                <label>Video conferencing</label>
+            </value>
+            <value>
+                <fullName>Student/staff issues</fullName>
+                <default>false</default>
+                <label>Student/staff issues</label>
+            </value>
+            <value>
+                <fullName>Turnaround time</fullName>
+                <default>false</default>
+                <label>Turnaround time</label>
+            </value>
+            <value>
+                <fullName>Scheduling</fullName>
+                <default>false</default>
+                <label>Scheduling</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Resignation</fullName>
+                <default>false</default>
+                <label>Resignation</label>
+            </value>
+            <value>
+                <fullName>Availability</fullName>
+                <default>false</default>
+                <label>Availability</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Presenter numbers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <valueName>Roster issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Workshop scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Printing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <valueName>Scheduling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <valueName>Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Admin</controllingFieldValue>
+            <valueName>Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Service</controllingFieldValue>
+            <valueName>Turnaround time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presenter</controllingFieldValue>
+            <valueName>Performance/quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presenter</controllingFieldValue>
+            <valueName>Professionalism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presenter</controllingFieldValue>
+            <valueName>Punctuality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presenter</controllingFieldValue>
+            <valueName>Illness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presenter</controllingFieldValue>
+            <valueName>Resignation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presenter</controllingFieldValue>
+            <valueName>Availability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Content</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>School</controllingFieldValue>
+            <valueName>Student/staff issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System</controllingFieldValue>
+            <valueName>Tech bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>System</controllingFieldValue>
+            <valueName>Video conferencing</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
