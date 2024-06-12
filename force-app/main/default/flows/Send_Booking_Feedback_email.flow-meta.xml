@@ -126,7 +126,7 @@
         <inputParameters>
             <name>OrgWideEmailAddress</name>
             <value>
-                <stringValue>tris@elevateeducation.com</stringValue>
+                <stringValue>customer@elevateeducation.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -276,7 +276,7 @@
         <inputParameters>
             <name>OrgWideEmailAddress</name>
             <value>
-                <stringValue>tris@elevateeducation.com</stringValue>
+                <stringValue>customer@elevateeducation.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
