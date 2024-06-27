@@ -471,7 +471,7 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
         </rules>
     </decisions>
     <decisions>
-        <description>Is the calendly event type a round robin event?</description>
+        <description>Is the calendly event type a round robin event? If so, there is an extra question of asking for phone number and that changes the number of questions in Calendly form. So &apos;Create Lead&apos; is different too.</description>
         <name>Is_Round_Robin</name>
         <label>Is Round Robin?</label>
         <locationX>182</locationX>
@@ -482,12 +482,19 @@ So at this point, we hope to have an owner defined.  If we don&apos;t we&apos;ll
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Calendly__EventTypeKind__c</leftValueReference>
-                <operator>Contains</operator>
+                <leftValueReference>$Record.Calendly__EventPrimaryPublisherEmail__c</leftValueReference>
+                <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Robin</stringValue>
+                    <stringValue>leah@elevateeducation.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Calendly__EventPrimaryPublisherEmail__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>phoebe.marcheff@elevateeducation.com</stringValue>
                 </rightValue>
             </conditions>
             <connector>
