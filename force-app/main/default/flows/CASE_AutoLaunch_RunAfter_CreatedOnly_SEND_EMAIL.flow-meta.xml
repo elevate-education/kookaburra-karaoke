@@ -14,7 +14,7 @@ SBU General Manager role&apos;s email address</description>
         <inputParameters>
             <name>ContactorLeadID</name>
             <value>
-                <elementReference>$Record.CreatedBy.ManagerId</elementReference>
+                <stringValue>0036F00002CHO4OQAX</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -25,14 +25,11 @@ SBU General Manager role&apos;s email address</description>
         </inputParameters>
         <inputParameters>
             <name>HtmlBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
         </inputParameters>
         <inputParameters>
             <name>OrgWideEmailAddress</name>
             <value>
-                <stringValue>schools@elevateeducation.com</stringValue>
+                <stringValue>wizards@elevateeducation.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -50,7 +47,13 @@ SBU General Manager role&apos;s email address</description>
         <inputParameters>
             <name>ToAddresses</name>
             <value>
-                <stringValue>schools@elevateeducation.com</stringValue>
+                <stringValue>schools@elevateeducation.com, rob@elevateeducation.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>TreatTargetObjectAsRecipient</name>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </inputParameters>
         <nameSegment>GLSendEmail__SendEmail</nameSegment>
