@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>4</fullName>
+        <default>false</default>
+        <label>4</label>
+    </customValue>
+    <customValue>
+        <fullName>5</fullName>
+        <default>false</default>
+        <label>5</label>
+    </customValue>
+    <customValue>
+        <fullName>6</fullName>
+        <default>false</default>
+        <label>6</label>
+    </customValue>
+    <customValue>
+        <fullName>7</fullName>
+        <default>false</default>
+        <label>7</label>
+    </customValue>
+    <customValue>
+        <fullName>8</fullName>
+        <default>false</default>
+        <label>8</label>
+    </customValue>
+    <customValue>
+        <fullName>9</fullName>
+        <default>false</default>
+        <label>9</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>10</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>11</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>12</label>
+    </customValue>
+    <customValue>
+        <fullName>13</fullName>
+        <default>false</default>
+        <label>13</label>
+    </customValue>
+    <customValue>
+        <fullName>Primary</fullName>
+        <default>false</default>
+        <label>Primary</label>
+    </customValue>
+    <customValue>
+        <fullName>Primary 4</fullName>
+        <default>false</default>
+        <label>Primary 4</label>
+    </customValue>
+    <customValue>
+        <fullName>Primary 5</fullName>
+        <default>false</default>
+        <label>Primary 5</label>
+    </customValue>
+    <customValue>
+        <fullName>Primary 6</fullName>
+        <default>false</default>
+        <label>Primary 6</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 1</fullName>
+        <default>false</default>
+        <label>Secondary 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 1E</fullName>
+        <default>false</default>
+        <label>Secondary 1E</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 1NA</fullName>
+        <default>false</default>
+        <label>Secondary 1NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 1NT</fullName>
+        <default>false</default>
+        <label>Secondary 1NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 1NA &amp; NT</fullName>
+        <default>false</default>
+        <label>Secondary 1NA &amp; NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 2</fullName>
+        <default>false</default>
+        <label>Secondary 2</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 2E</fullName>
+        <default>false</default>
+        <label>Secondary 2E</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 2NA</fullName>
+        <default>false</default>
+        <label>Secondary 2NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 2NT</fullName>
+        <default>false</default>
+        <label>Secondary 2NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 2NA &amp; NT</fullName>
+        <default>false</default>
+        <label>Secondary 2NA &amp; NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 3</fullName>
+        <default>false</default>
+        <label>Secondary 3</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 3E</fullName>
+        <default>false</default>
+        <label>Secondary 3E</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 3NA</fullName>
+        <default>false</default>
+        <label>Secondary 3NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 3NT</fullName>
+        <default>false</default>
+        <label>Secondary 3NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 3NA &amp; NT</fullName>
+        <default>false</default>
+        <label>Secondary 3NA &amp; NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 4</fullName>
+        <default>false</default>
+        <label>Secondary 4</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 4E</fullName>
+        <default>false</default>
+        <label>Secondary 4E</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 4NA</fullName>
+        <default>false</default>
+        <label>Secondary 4NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 4NT</fullName>
+        <default>false</default>
+        <label>Secondary 4NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 4NA &amp; NT</fullName>
+        <default>false</default>
+        <label>Secondary 4NA &amp; NT</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 5NA</fullName>
+        <default>false</default>
+        <label>Secondary 5NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Secondary 4E &amp; 5NA</fullName>
+        <default>false</default>
+        <label>Secondary 4E &amp; 5NA</label>
+    </customValue>
+    <customValue>
+        <fullName>Tertiary</fullName>
+        <default>false</default>
+        <label>Tertiary</label>
+    </customValue>
+    <customValue>
+        <fullName>JC1</fullName>
+        <default>false</default>
+        <label>JC1</label>
+    </customValue>
+    <customValue>
+        <fullName>JC2</fullName>
+        <default>false</default>
+        <label>JC2</label>
+    </customValue>
+    <customValue>
+        <fullName>K-5</fullName>
+        <default>false</default>
+        <label>K-5</label>
+    </customValue>
+    <customValue>
+        <fullName>6-8</fullName>
+        <default>false</default>
+        <label>6-8</label>
+    </customValue>
+    <customValue>
+        <fullName>9-12</fullName>
+        <default>false</default>
+        <label>9-12</label>
+    </customValue>
+    <customValue>
+        <fullName>7&amp;8&amp;9</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>7&amp;8&amp;9</label>
+    </customValue>
+    <customValue>
+        <fullName>10&amp;11</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>10&amp;11</label>
+    </customValue>
+    <customValue>
+        <fullName>8&amp;9</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>8&amp;9</label>
+    </customValue>
+    <customValue>
+        <fullName>9&amp;10</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>9&amp;10</label>
+    </customValue>
+    <customValue>
+        <fullName>7&amp;8</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>7&amp;8</label>
+    </customValue>
+    <customValue>
+        <fullName>6&amp;7</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>6&amp;7</label>
+    </customValue>
+    <masterLabel>Year Level</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
