@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_Level__c</fullName>
+    <description>WDCi: To track seminar year</description>
+    <label>Year Level</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>3</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>4</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <default>false</default>
+                <label>5</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>6</label>
+            </value>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>7</label>
+            </value>
+            <value>
+                <fullName>8</fullName>
+                <default>false</default>
+                <label>8</label>
+            </value>
+            <value>
+                <fullName>9</fullName>
+                <default>false</default>
+                <label>9</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10</label>
+            </value>
+            <value>
+                <fullName>11</fullName>
+                <default>false</default>
+                <label>11</label>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>false</default>
+                <label>12</label>
+            </value>
+            <value>
+                <fullName>13</fullName>
+                <default>false</default>
+                <label>13</label>
+            </value>
+            <value>
+                <fullName>Year 1</fullName>
+                <default>false</default>
+                <label>Year 1</label>
+            </value>
+            <value>
+                <fullName>Year 2</fullName>
+                <default>false</default>
+                <label>Year 2</label>
+            </value>
+            <value>
+                <fullName>Year 3</fullName>
+                <default>false</default>
+                <label>Year 3</label>
+            </value>
+            <value>
+                <fullName>Year 4</fullName>
+                <default>false</default>
+                <label>Year 4</label>
+            </value>
+            <value>
+                <fullName>Postgraduate</fullName>
+                <default>false</default>
+                <label>Postgraduate</label>
+            </value>
+            <value>
+                <fullName>Primary 4</fullName>
+                <default>false</default>
+                <label>Primary 4</label>
+            </value>
+            <value>
+                <fullName>Primary 5</fullName>
+                <default>false</default>
+                <label>Primary 5</label>
+            </value>
+            <value>
+                <fullName>Primary 6</fullName>
+                <default>false</default>
+                <label>Primary 6</label>
+            </value>
+            <value>
+                <fullName>Secondary 1</fullName>
+                <default>false</default>
+                <label>Secondary 1</label>
+            </value>
+            <value>
+                <fullName>Secondary 1E</fullName>
+                <default>false</default>
+                <label>Secondary 1E</label>
+            </value>
+            <value>
+                <fullName>Secondary 1NA</fullName>
+                <default>false</default>
+                <label>Secondary 1NA</label>
+            </value>
+            <value>
+                <fullName>Secondary 1NT</fullName>
+                <default>false</default>
+                <label>Secondary 1NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 1NA &amp; NT</fullName>
+                <default>false</default>
+                <label>Secondary 1NA &amp; NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 2</fullName>
+                <default>false</default>
+                <label>Secondary 2</label>
+            </value>
+            <value>
+                <fullName>Secondary 2E</fullName>
+                <default>false</default>
+                <label>Secondary 2E</label>
+            </value>
+            <value>
+                <fullName>Secondary 2NA</fullName>
+                <default>false</default>
+                <label>Secondary 2NA</label>
+            </value>
+            <value>
+                <fullName>Secondary 2NT</fullName>
+                <default>false</default>
+                <label>Secondary 2NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 2NA &amp; NT</fullName>
+                <default>false</default>
+                <label>Secondary 2NA &amp; NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 3</fullName>
+                <default>false</default>
+                <label>Secondary 3</label>
+            </value>
+            <value>
+                <fullName>Secondary 3E</fullName>
+                <default>false</default>
+                <label>Secondary 3E</label>
+            </value>
+            <value>
+                <fullName>Secondary 3NA</fullName>
+                <default>false</default>
+                <label>Secondary 3NA</label>
+            </value>
+            <value>
+                <fullName>Secondary 3NT</fullName>
+                <default>false</default>
+                <label>Secondary 3NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 3NA &amp; NT</fullName>
+                <default>false</default>
+                <label>Secondary 3NA &amp; NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 4</fullName>
+                <default>false</default>
+                <label>Secondary 4</label>
+            </value>
+            <value>
+                <fullName>Secondary 4E</fullName>
+                <default>false</default>
+                <label>Secondary 4E</label>
+            </value>
+            <value>
+                <fullName>Secondary 4NA</fullName>
+                <default>false</default>
+                <label>Secondary 4NA</label>
+            </value>
+            <value>
+                <fullName>Secondary 4NT</fullName>
+                <default>false</default>
+                <label>Secondary 4NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 4NA &amp; NT</fullName>
+                <default>false</default>
+                <label>Secondary 4NA &amp; NT</label>
+            </value>
+            <value>
+                <fullName>Secondary 5NA</fullName>
+                <default>false</default>
+                <label>Secondary 5NA</label>
+            </value>
+            <value>
+                <fullName>Secondary 4E &amp; 5NA</fullName>
+                <default>false</default>
+                <label>Secondary 4E &amp; 5NA</label>
+            </value>
+            <value>
+                <fullName>JC1</fullName>
+                <default>false</default>
+                <label>JC1</label>
+            </value>
+            <value>
+                <fullName>JC2</fullName>
+                <default>false</default>
+                <label>JC2</label>
+            </value>
+            <value>
+                <fullName>K-5</fullName>
+                <default>false</default>
+                <label>K-5</label>
+            </value>
+            <value>
+                <fullName>6-8</fullName>
+                <default>false</default>
+                <label>6-8</label>
+            </value>
+            <value>
+                <fullName>9-12</fullName>
+                <default>false</default>
+                <label>9-12</label>
+            </value>
+            <value>
+                <fullName>10&amp;11</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>10&amp;11</label>
+            </value>
+            <value>
+                <fullName>11&amp;12</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>11&amp;12</label>
+            </value>
+            <value>
+                <fullName>6&amp;7</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6&amp;7</label>
+            </value>
+            <value>
+                <fullName>7&amp;8</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>7&amp;8</label>
+            </value>
+            <value>
+                <fullName>7&amp;8&amp;9</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>7&amp;8&amp;9</label>
+            </value>
+            <value>
+                <fullName>8&amp;9</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>8&amp;9</label>
+            </value>
+            <value>
+                <fullName>9&amp;10</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>9&amp;10</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>
