@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>wdci_Set_Booking_Delivered</fullName>
+        <actions>
+            <name>wdci_Set_Booking_To_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>WDCi: this is to set Booking status to Delivered when the # of seminar = # of completed seminar</description>
+        <formula>OR (
+
+ AND(
+
+   Booking_Type__c &lt;&gt; &quot;Notes&quot;, Total_Seminar__c = Total_Completed_Seminar__c ,
+
+   Total_Seminar__c != 0 &amp;&amp; Total_Completed_Seminar__c != 0 ,
+
+   Feedback_Collected__c == false
+
+ ),
+
+ AND(
+
+   Booking_Type__c == &quot;Notes&quot;,
+
+   ISCHANGED(Printing_Ordered__c),
+
+  ISBLANK(Printing_Ordered__c) = FALSE
+
+ )
+
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>
