@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Radius_included_in_travel_fee__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To confirm if the school is included in 20km radius or not. To ensure we charge travel fee correctly.</description>
+    <inlineHelpText>To confirm if the school is included in 20km radius or not. To ensure we charge travel fee correctly.</inlineHelpText>
+    <label>Radius included in travel fee</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
