@@ -1,20 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>When a new case (type: School) is created, send an email notification to:
-client services shared mailbox: schools@
-SBU General Manager role&apos;s email address</description>
-        <name>Send_email_Notification</name>
-        <label>Send email notification</label>
-        <locationX>176</locationX>
-        <locationY>323</locationY>
+        <description>Notify: Andre &amp; Chad</description>
+        <name>SA_Send_email_notification</name>
+        <label>SA: Send email notification</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>ContactorLeadID</name>
             <value>
-                <stringValue>0036F00002CHO4OQAX</stringValue>
+                <stringValue>0038r00000QFlLXAA1</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>EmailTemplateId</name>
+            <value>
+                <stringValue>00X8r000001ePdREAU</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>HtmlBody</name>
+        </inputParameters>
+        <inputParameters>
+            <name>OrgWideEmailAddress</name>
+            <value>
+                <stringValue>wizards@elevateeducation.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RelatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>SaveAsActivity</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ToAddresses</name>
+            <value>
+                <elementReference>SA_Recipient</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>TreatTargetObjectAsRecipient</name>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>GLSendEmail__SendEmail</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>When a new case (type: School) is created, send an email notification to:
+client services shared mailbox: schools@
+SBU General Manager role&apos;s email address</description>
+        <name>USA_Send_email_notification</name>
+        <label>USA: Send email notification</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <actionName>GLSendEmail__SendEmail</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>ContactorLeadID</name>
+            <value>
+                <stringValue>0038r00000QFlLXAA1</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -60,6 +117,65 @@ SBU General Manager role&apos;s email address</description>
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>60.0</apiVersion>
+    <decisions>
+        <description>FOR NEW CASE</description>
+        <name>SBU</name>
+        <label>SBU?</label>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Elevate_USA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate USA</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0126F000001WxV7QAK</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>USA_Send_email_notification</targetReference>
+            </connector>
+            <label>USA (School)</label>
+        </rules>
+        <rules>
+            <name>Elevate_SA</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0126F000001WxV7QAK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>012I80000004I2RIAU</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SA_Send_email_notification</targetReference>
+            </connector>
+            <label>SA (School &amp; HR)</label>
+        </rules>
+    </decisions>
     <description>When a new case (type: School) is created, send an email notification to:
 client services shared mailbox: schools@
 SBU General Manager role&apos;s email address</description>
@@ -86,12 +202,12 @@ SBU General Manager role&apos;s email address</description>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>50</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Send_email_Notification</targetReference>
+            <targetReference>SBU</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>Business_Unit__c</field>
             <operator>EqualTo</operator>
@@ -100,10 +216,10 @@ SBU General Manager role&apos;s email address</description>
             </value>
         </filters>
         <filters>
-            <field>RecordTypeId</field>
+            <field>Business_Unit__c</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>0126F000001WxV7QAK</stringValue>
+                <stringValue>Elevate South Africa</stringValue>
             </value>
         </filters>
         <object>Case</object>
@@ -111,4 +227,14 @@ SBU General Manager role&apos;s email address</description>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>SA_Recipient</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>kathlyn@elevateeducation.com, kpalubon096@gmail.com</stringValue>
+        </value>
+    </variables>
 </Flow>
