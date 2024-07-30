@@ -130,6 +130,118 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Final_Debriefed__c</picklist>
+        <values>
+            <fullName>Every session</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Never</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sometimes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Final_Program_Impact__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Final_Program_Rating__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Final_Recommendation_Likelihood__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>First_Debrief_Mode_b2C__c</picklist>
         <values>
             <fullName>Email</fullName>
@@ -150,6 +262,118 @@
     </picklistValues>
     <picklistValues>
         <picklist>First_Debrief_Rating_b2c__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Debriefed__c</picklist>
+        <values>
+            <fullName>Every Session</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Never</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sometimes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Program_Impact__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Program_Rating__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Recommendation_Likelihood__c</picklist>
         <values>
             <fullName>1</fullName>
             <default>false</default>
@@ -311,6 +535,41 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Method_of_Contact__c</picklist>
+        <values>
+            <fullName>Coaching Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parents Seminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminars Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Mid_Debrief_Mode_b2c__c</picklist>
         <values>
             <fullName>Email</fullName>
@@ -331,6 +590,118 @@
     </picklistValues>
     <picklistValues>
         <picklist>Mid_Debrief_Rating_b2c__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mid_Debriefed__c</picklist>
+        <values>
+            <fullName>Every Session</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Never</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sometimes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mid_Program_Impact__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mid_Program_Rating__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mid_Recommendation_Likelihood__c</picklist>
         <values>
             <fullName>1</fullName>
             <default>false</default>
@@ -426,6 +797,14 @@
         </values>
         <values>
             <fullName>2023-24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2024-25</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -674,6 +1053,10 @@
     <picklistValues>
         <picklist>Year_Level_Initial_Contact__c</picklist>
         <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>10</fullName>
             <default>false</default>
         </values>
@@ -687,6 +1070,14 @@
         </values>
         <values>
             <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
             <default>false</default>
         </values>
         <values>
