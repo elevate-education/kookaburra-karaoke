@@ -316,15 +316,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Deposit_Invoice_Created__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Deposit_Invoice_Sent__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Deposit_Invoice_Comments__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Create_Deposit_Invoice__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -351,6 +351,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Bread_Winner__Total_Draft_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Deposit_Invoice_Created__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
