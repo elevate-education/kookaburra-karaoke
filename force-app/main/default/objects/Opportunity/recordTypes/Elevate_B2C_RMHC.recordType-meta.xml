@@ -559,6 +559,41 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Method_of_Contact__c</picklist>
+        <values>
+            <fullName>Coaching Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parents Seminar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminars Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Mid_Debrief_Mode_b2c__c</picklist>
         <values>
             <fullName>Email</fullName>
@@ -1046,6 +1081,10 @@
     <picklistValues>
         <picklist>Year_Level_Initial_Contact__c</picklist>
         <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>10</fullName>
             <default>false</default>
         </values>
@@ -1059,6 +1098,14 @@
         </values>
         <values>
             <fullName>13</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
             <default>false</default>
         </values>
         <values>
