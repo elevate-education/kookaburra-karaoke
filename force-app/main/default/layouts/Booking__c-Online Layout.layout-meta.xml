@@ -424,6 +424,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Create_Final_Invoice__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Final_Invoice_Created__c</field>
             </layoutItems>
             <layoutItems>
