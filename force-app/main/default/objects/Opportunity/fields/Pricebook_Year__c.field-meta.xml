@@ -2,7 +2,8 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Pricebook_Year__c</fullName>
     <defaultValue>TEXT(YEAR(TODAY()))</defaultValue>
-    <description>This is the year that comes up in a Quote document. The year used to choose the related pricebook</description>
+    <description>This is the year that comes up in a Quote document. The year used to choose the related pricebook.
+NOTE: AB unticked &apos;restrict picklist to values in value set&apos; which has resolved a Cura webservice issue. 20/3/2024</description>
     <externalId>false</externalId>
     <inlineHelpText>Choose the year to display in the Quote document (defaults to current year)</inlineHelpText>
     <label>Program Year</label>
@@ -12,9 +13,23 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
-        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
+            <value>
+                <fullName>2026</fullName>
+                <default>false</default>
+                <label>2026</label>
+            </value>
+            <value>
+                <fullName>2025-26</fullName>
+                <default>false</default>
+                <label>2025-26</label>
+            </value>
+            <value>
+                <fullName>2025</fullName>
+                <default>false</default>
+                <label>2025</label>
+            </value>
             <value>
                 <fullName>2024-25</fullName>
                 <default>false</default>
