@@ -176,10 +176,10 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Product_Line__c</leftValueReference>
+                <leftValueReference>$Record.Business_Unit__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>PBL</stringValue>
+                    <stringValue>Cura</stringValue>
                 </rightValue>
             </conditions>
             <connector>
