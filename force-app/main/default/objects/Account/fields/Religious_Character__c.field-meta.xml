@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Religious_Character__c</fullName>
+    <externalId>false</externalId>
+    <label>Religious Character</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Church of England</fullName>
+                <default>false</default>
+                <label>Church of England</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Does not apply</fullName>
+                <default>false</default>
+                <label>Does not apply</label>
+            </value>
+            <value>
+                <fullName>Roman Catholic</fullName>
+                <default>false</default>
+                <label>Roman Catholic</label>
+            </value>
+            <value>
+                <fullName>Catholic</fullName>
+                <default>false</default>
+                <label>Catholic</label>
+            </value>
+            <value>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+                <label>Jewish</label>
+            </value>
+            <value>
+                <fullName>Charadi Jewish</fullName>
+                <default>false</default>
+                <label>Charadi Jewish</label>
+            </value>
+            <value>
+                <fullName>Islam</fullName>
+                <default>false</default>
+                <label>Islam</label>
+            </value>
+            <value>
+                <fullName>Christian</fullName>
+                <default>false</default>
+                <label>Christian</label>
+            </value>
+            <value>
+                <fullName>Anglican</fullName>
+                <default>false</default>
+                <label>Anglican</label>
+            </value>
+            <value>
+                <fullName>Orthodox Jewish</fullName>
+                <default>false</default>
+                <label>Orthodox Jewish</label>
+            </value>
+            <value>
+                <fullName>Muslim</fullName>
+                <default>false</default>
+                <label>Muslim</label>
+            </value>
+            <value>
+                <fullName>Methodist</fullName>
+                <default>false</default>
+                <label>Methodist</label>
+            </value>
+            <value>
+                <fullName>Free Church</fullName>
+                <default>false</default>
+                <label>Free Church</label>
+            </value>
+            <value>
+                <fullName>Church of England/Christian</fullName>
+                <default>false</default>
+                <label>Church of England/Christian</label>
+            </value>
+            <value>
+                <fullName>Seventh Day Adventist</fullName>
+                <default>false</default>
+                <label>Seventh Day Adventist</label>
+            </value>
+            <value>
+                <fullName>Church of England/Methodist</fullName>
+                <default>false</default>
+                <label>Church of England/Methodist</label>
+            </value>
+            <value>
+                <fullName>Church of England/Free Church</fullName>
+                <default>false</default>
+                <label>Church of England/Free Church</label>
+            </value>
+            <value>
+                <fullName>Christian/Evangelical</fullName>
+                <default>false</default>
+                <label>Christian/Evangelical</label>
+            </value>
+            <value>
+                <fullName>Moravian</fullName>
+                <default>false</default>
+                <label>Moravian</label>
+            </value>
+            <value>
+                <fullName>Quaker</fullName>
+                <default>false</default>
+                <label>Quaker</label>
+            </value>
+            <value>
+                <fullName>United Reformed Church</fullName>
+                <default>false</default>
+                <label>United Reformed Church</label>
+            </value>
+            <value>
+                <fullName>Multi-faith</fullName>
+                <default>false</default>
+                <label>Multi-faith</label>
+            </value>
+            <value>
+                <fullName>Anglican/Evangelical</fullName>
+                <default>false</default>
+                <label>Anglican/Evangelical</label>
+            </value>
+            <value>
+                <fullName>Church of England/Roman Catholic</fullName>
+                <default>false</default>
+                <label>Church of England/Roman Catholic</label>
+            </value>
+            <value>
+                <fullName>Church of England/Evangelical</fullName>
+                <default>false</default>
+                <label>Church of England/Evangelical</label>
+            </value>
+            <value>
+                <fullName>Christian/Methodist</fullName>
+                <default>false</default>
+                <label>Christian/Methodist</label>
+            </value>
+            <value>
+                <fullName>Roman Catholic/Church of England</fullName>
+                <default>false</default>
+                <label>Roman Catholic/Church of England</label>
+            </value>
+            <value>
+                <fullName>Christian/non-denominational</fullName>
+                <default>false</default>
+                <label>Christian/non-denominational</label>
+            </value>
+            <value>
+                <fullName>Anglican/Christian</fullName>
+                <default>false</default>
+                <label>Anglican/Christian</label>
+            </value>
+            <value>
+                <fullName>Roman Catholic/Anglican</fullName>
+                <default>false</default>
+                <label>Roman Catholic/Anglican</label>
+            </value>
+            <value>
+                <fullName>Inter- / non- denominational</fullName>
+                <default>false</default>
+                <label>Inter- / non- denominational</label>
+            </value>
+            <value>
+                <fullName>Anglican/Church of England</fullName>
+                <default>false</default>
+                <label>Anglican/Church of England</label>
+            </value>
+            <value>
+                <fullName>Protestant/Evangelical</fullName>
+                <default>false</default>
+                <label>Protestant/Evangelical</label>
+            </value>
+            <value>
+                <fullName>Hindu</fullName>
+                <default>false</default>
+                <label>Hindu</label>
+            </value>
+            <value>
+                <fullName>Protestant</fullName>
+                <default>false</default>
+                <label>Protestant</label>
+            </value>
+            <value>
+                <fullName>Christian Science</fullName>
+                <default>false</default>
+                <label>Christian Science</label>
+            </value>
+            <value>
+                <fullName>Church of England/United Reformed Church</fullName>
+                <default>false</default>
+                <label>Church of England/United Reformed Church</label>
+            </value>
+            <value>
+                <fullName>Plymouth Brethren Christian Church</fullName>
+                <default>false</default>
+                <label>Plymouth Brethren Christian Church</label>
+            </value>
+            <value>
+                <fullName>Sikh</fullName>
+                <default>false</default>
+                <label>Sikh</label>
+            </value>
+            <value>
+                <fullName>Sunni Deobandi</fullName>
+                <default>false</default>
+                <label>Sunni Deobandi</label>
+            </value>
+            <value>
+                <fullName>Greek Orthodox</fullName>
+                <default>false</default>
+                <label>Greek Orthodox</label>
+            </value>
+            <value>
+                <fullName>Methodist/Church of England</fullName>
+                <default>false</default>
+                <label>Methodist/Church of England</label>
+            </value>
+            <value>
+                <fullName>Church of England/Methodist/United Reform Church/Baptist</fullName>
+                <default>false</default>
+                <label>Church of England/Methodist/United Reform Church/Baptist</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
