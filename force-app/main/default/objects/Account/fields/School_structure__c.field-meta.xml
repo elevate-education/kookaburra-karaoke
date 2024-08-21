@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>School_structure__c</fullName>
+    <externalId>false</externalId>
+    <label>Phase of Education</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Territory__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6th Form</fullName>
+                <default>false</default>
+                <label>6th Form</label>
+            </value>
+            <value>
+                <fullName>Composite</fullName>
+                <default>false</default>
+                <label>Composite</label>
+            </value>
+            <value>
+                <fullName>Elementary</fullName>
+                <default>false</default>
+                <label>Elementary</label>
+            </value>
+            <value>
+                <fullName>Elementary School</fullName>
+                <default>false</default>
+                <label>Elementary School</label>
+            </value>
+            <value>
+                <fullName>High School</fullName>
+                <default>false</default>
+                <label>High School</label>
+            </value>
+            <value>
+                <fullName>Junior College</fullName>
+                <default>false</default>
+                <label>Junior College</label>
+            </value>
+            <value>
+                <fullName>K-12</fullName>
+                <default>false</default>
+                <label>K-12</label>
+            </value>
+            <value>
+                <fullName>K-8 School</fullName>
+                <default>false</default>
+                <label>K-8 School</label>
+            </value>
+            <value>
+                <fullName>Middle School</fullName>
+                <default>false</default>
+                <label>Middle School</label>
+            </value>
+            <value>
+                <fullName>Prep</fullName>
+                <default>false</default>
+                <label>Prep</label>
+            </value>
+            <value>
+                <fullName>Primary</fullName>
+                <default>false</default>
+                <label>Primary</label>
+            </value>
+            <value>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+                <label>Secondary</label>
+            </value>
+            <value>
+                <fullName>Tertiary</fullName>
+                <default>false</default>
+                <label>Tertiary</label>
+            </value>
+            <value>
+                <fullName>Primary &amp; Secondary</fullName>
+                <default>false</default>
+                <label>Primary &amp; Secondary</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Africa</controllingFieldValue>
+            <controllingFieldValue>South America</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Primary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Africa</controllingFieldValue>
+            <controllingFieldValue>South America</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Secondary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Africa</controllingFieldValue>
+            <controllingFieldValue>South America</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Tertiary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Africa</controllingFieldValue>
+            <controllingFieldValue>South America</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Primary &amp; Secondary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <valueName>6th Form</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Middle School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <valueName>Prep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Elementary School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>High School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>K-12</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>K-8 School</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Composite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Junior College</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

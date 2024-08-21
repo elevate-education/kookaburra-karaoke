@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Boarders__c</fullName>
+    <externalId>false</externalId>
+    <label>Boarders</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No boarders</fullName>
+                <default>false</default>
+                <label>No boarders</label>
+            </value>
+            <value>
+                <fullName>Boarding school</fullName>
+                <default>false</default>
+                <label>Boarding school</label>
+            </value>
+            <value>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+                <label>Not applicable</label>
+            </value>
+            <value>
+                <fullName>College / FE residential accommodation</fullName>
+                <default>false</default>
+                <label>College / FE residential accommodation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

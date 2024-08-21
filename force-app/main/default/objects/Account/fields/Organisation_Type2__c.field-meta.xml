@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organisation_Type2__c</fullName>
+    <externalId>false</externalId>
+    <label>Organisation Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Children&apos;s centre</fullName>
+                <default>false</default>
+                <label>Children&apos;s centre</label>
+            </value>
+            <value>
+                <fullName>Children&apos;s centre linked site</fullName>
+                <default>false</default>
+                <label>Children&apos;s centre linked site</label>
+            </value>
+            <value>
+                <fullName>Voluntary aided school</fullName>
+                <default>false</default>
+                <label>Voluntary aided school</label>
+            </value>
+            <value>
+                <fullName>Other independent school</fullName>
+                <default>false</default>
+                <label>Other independent school</label>
+            </value>
+            <value>
+                <fullName>Local authority nursery school</fullName>
+                <default>false</default>
+                <label>Local authority nursery school</label>
+            </value>
+            <value>
+                <fullName>Pupil referral unit</fullName>
+                <default>false</default>
+                <label>Pupil referral unit</label>
+            </value>
+            <value>
+                <fullName>Community school</fullName>
+                <default>false</default>
+                <label>Community school</label>
+            </value>
+            <value>
+                <fullName>Foundation special school</fullName>
+                <default>false</default>
+                <label>Foundation special school</label>
+            </value>
+            <value>
+                <fullName>Community special school</fullName>
+                <default>false</default>
+                <label>Community special school</label>
+            </value>
+            <value>
+                <fullName>Foundation school</fullName>
+                <default>false</default>
+                <label>Foundation school</label>
+            </value>
+            <value>
+                <fullName>Voluntary controlled school</fullName>
+                <default>false</default>
+                <label>Voluntary controlled school</label>
+            </value>
+            <value>
+                <fullName>Other independent special school</fullName>
+                <default>false</default>
+                <label>Other independent special school</label>
+            </value>
+            <value>
+                <fullName>City technology college</fullName>
+                <default>false</default>
+                <label>City technology college</label>
+            </value>
+            <value>
+                <fullName>Non-maintained special school</fullName>
+                <default>false</default>
+                <label>Non-maintained special school</label>
+            </value>
+            <value>
+                <fullName>Academy sponsor led</fullName>
+                <default>false</default>
+                <label>Academy sponsor led</label>
+            </value>
+            <value>
+                <fullName>Special post 16 institution</fullName>
+                <default>false</default>
+                <label>Special post 16 institution</label>
+            </value>
+            <value>
+                <fullName>Secure units</fullName>
+                <default>false</default>
+                <label>Secure units</label>
+            </value>
+            <value>
+                <fullName>Further education</fullName>
+                <default>false</default>
+                <label>Further education</label>
+            </value>
+            <value>
+                <fullName>Higher education institutions</fullName>
+                <default>false</default>
+                <label>Higher education institutions</label>
+            </value>
+            <value>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+                <label>Miscellaneous</label>
+            </value>
+            <value>
+                <fullName>British schools overseas</fullName>
+                <default>false</default>
+                <label>British schools overseas</label>
+            </value>
+            <value>
+                <fullName>Service children&apos;s education</fullName>
+                <default>false</default>
+                <label>Service children&apos;s education</label>
+            </value>
+            <value>
+                <fullName>Offshore schools</fullName>
+                <default>false</default>
+                <label>Offshore schools</label>
+            </value>
+            <value>
+                <fullName>Sixth form centres</fullName>
+                <default>false</default>
+                <label>Sixth form centres</label>
+            </value>
+            <value>
+                <fullName>Academy converter</fullName>
+                <default>false</default>
+                <label>Academy converter</label>
+            </value>
+            <value>
+                <fullName>Free schools</fullName>
+                <default>false</default>
+                <label>Free schools</label>
+            </value>
+            <value>
+                <fullName>Academy special converter</fullName>
+                <default>false</default>
+                <label>Academy special converter</label>
+            </value>
+            <value>
+                <fullName>Studio schools</fullName>
+                <default>false</default>
+                <label>Studio schools</label>
+            </value>
+            <value>
+                <fullName>University technical college</fullName>
+                <default>false</default>
+                <label>University technical college</label>
+            </value>
+            <value>
+                <fullName>Academy special sponsor led</fullName>
+                <default>false</default>
+                <label>Academy special sponsor led</label>
+            </value>
+            <value>
+                <fullName>Free schools alternative provision</fullName>
+                <default>false</default>
+                <label>Free schools alternative provision</label>
+            </value>
+            <value>
+                <fullName>Free schools special</fullName>
+                <default>false</default>
+                <label>Free schools special</label>
+            </value>
+            <value>
+                <fullName>Free schools 16 to 19</fullName>
+                <default>false</default>
+                <label>Free schools 16 to 19</label>
+            </value>
+            <value>
+                <fullName>Academy 16-19 converter</fullName>
+                <default>false</default>
+                <label>Academy 16-19 converter</label>
+            </value>
+            <value>
+                <fullName>Academy alternative provision converter</fullName>
+                <default>false</default>
+                <label>Academy alternative provision converter</label>
+            </value>
+            <value>
+                <fullName>Academy alternative provision sponsor led</fullName>
+                <default>false</default>
+                <label>Academy alternative provision sponsor led</label>
+            </value>
+            <value>
+                <fullName>Academy 16 to 19 sponsor led</fullName>
+                <default>false</default>
+                <label>Academy 16 to 19 sponsor led</label>
+            </value>
+            <value>
+                <fullName>Online provider</fullName>
+                <default>false</default>
+                <label>Online provider</label>
+            </value>
+            <value>
+                <fullName>Academy secure 16 to 19</fullName>
+                <default>false</default>
+                <label>Academy secure 16 to 19</label>
+            </value>
+            <value>
+                <fullName>Welsh establishment</fullName>
+                <default>false</default>
+                <label>Welsh establishment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
