@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>School Type Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Territory__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Academy Network</fullName>
+                <default>false</default>
+                <label>Academy Network</label>
+            </value>
+            <value>
+                <fullName>Catholic</fullName>
+                <default>false</default>
+                <label>Catholic</label>
+            </value>
+            <value>
+                <fullName>Charter</fullName>
+                <default>false</default>
+                <label>Charter</label>
+            </value>
+            <value>
+                <fullName>Charter Network</fullName>
+                <default>false</default>
+                <label>Charter Network</label>
+            </value>
+            <value>
+                <fullName>Christian</fullName>
+                <default>false</default>
+                <label>Christian</label>
+            </value>
+            <value>
+                <fullName>County District</fullName>
+                <default>false</default>
+                <label>County District</label>
+            </value>
+            <value>
+                <fullName>Denominational</fullName>
+                <default>false</default>
+                <label>Denominational</label>
+            </value>
+            <value>
+                <fullName>Episcopal</fullName>
+                <default>false</default>
+                <label>Episcopal</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Government-aided</fullName>
+                <default>false</default>
+                <label>Government-aided</label>
+            </value>
+            <value>
+                <fullName>Independent</fullName>
+                <default>false</default>
+                <label>Independent</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Islamic</fullName>
+                <default>false</default>
+                <label>Islamic</label>
+            </value>
+            <value>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+                <label>Jewish</label>
+            </value>
+            <value>
+                <fullName>Local</fullName>
+                <default>false</default>
+                <label>Local</label>
+            </value>
+            <value>
+                <fullName>Lutheran</fullName>
+                <default>false</default>
+                <label>Lutheran</label>
+            </value>
+            <value>
+                <fullName>Peak Body</fullName>
+                <default>false</default>
+                <label>Peak Body</label>
+            </value>
+            <value>
+                <fullName>Prep</fullName>
+                <default>false</default>
+                <label>Prep School</label>
+            </value>
+            <value>
+                <fullName>Private</fullName>
+                <default>false</default>
+                <label>Private</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>Public</label>
+            </value>
+            <value>
+                <fullName>School District</fullName>
+                <default>false</default>
+                <label>School District</label>
+            </value>
+            <value>
+                <fullName>School Network</fullName>
+                <default>false</default>
+                <label>School Network</label>
+            </value>
+            <value>
+                <fullName>Senior</fullName>
+                <default>false</default>
+                <label>Senior</label>
+            </value>
+            <value>
+                <fullName>Seventh Day Adventist</fullName>
+                <default>false</default>
+                <label>Seventh Day Adventist</label>
+            </value>
+            <value>
+                <fullName>Specialist</fullName>
+                <default>false</default>
+                <label>Specialist</label>
+            </value>
+            <value>
+                <fullName>State Department</fullName>
+                <default>false</default>
+                <label>State Department</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <label>Technical</label>
+            </value>
+            <value>
+                <fullName>University Career Department</fullName>
+                <default>false</default>
+                <label>University Career Department</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Denominational</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Training Territory</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Independent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Middle East</controllingFieldValue>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Training Territory</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Public</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <valueName>Academy Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Training Territory</controllingFieldValue>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Catholic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <controllingFieldValue>Africa</controllingFieldValue>
+            <valueName>Government</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <valueName>Prep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe</controllingFieldValue>
+            <valueName>Senior</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oceania</controllingFieldValue>
+            <controllingFieldValue>Training Territory</controllingFieldValue>
+            <valueName>School Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Africa</controllingFieldValue>
+            <valueName>Private</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Charter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Charter Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Christian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Episcopal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Islamic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Jewish</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Lutheran</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Peak Body</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>School District</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>Seventh Day Adventist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>State Department</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America</controllingFieldValue>
+            <valueName>University Career Department</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia</controllingFieldValue>
+            <valueName>Local</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
