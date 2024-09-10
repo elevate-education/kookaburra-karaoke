@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Severity__c</fullName>
+    <externalId>false</externalId>
+    <label>Severity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High – Client impacted and unhappy</fullName>
+                <default>false</default>
+                <label>High – Client impacted and unhappy</label>
+            </value>
+            <value>
+                <fullName>Medium – Client impacted but happy</fullName>
+                <default>false</default>
+                <label>Medium – Client impacted but happy</label>
+            </value>
+            <value>
+                <fullName>Low – Client not impacted</fullName>
+                <default>false</default>
+                <label>Low – Client not impacted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
