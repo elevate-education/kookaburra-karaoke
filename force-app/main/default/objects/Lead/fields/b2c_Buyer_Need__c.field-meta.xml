@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>b2c_Buyer_Need__c</fullName>
+    <description>Needs of the student that have prompted the parent to reach out</description>
+    <externalId>false</externalId>
+    <label>Buyer Need</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anxiety or mental wellbeing</fullName>
+                <default>false</default>
+                <label>Anxiety or mental wellbeing</label>
+            </value>
+            <value>
+                <fullName>Lack of motivation</fullName>
+                <default>false</default>
+                <label>Lack of motivation</label>
+            </value>
+            <value>
+                <fullName>My child is doing well but I’d like to see them do even better</fullName>
+                <default>false</default>
+                <label>My child is doing well but I’d like to see them do even better</label>
+            </value>
+            <value>
+                <fullName>No concerns</fullName>
+                <default>false</default>
+                <label>No concerns</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Poor marks or exam performance</fullName>
+                <default>false</default>
+                <label>Poor marks or exam performance</label>
+            </value>
+            <value>
+                <fullName>Poor organisation and time management</fullName>
+                <default>false</default>
+                <label>Poor organisation and time management</label>
+            </value>
+            <value>
+                <fullName>Studying with ADHD</fullName>
+                <default>false</default>
+                <label>Studying with ADHD</label>
+            </value>
+            <value>
+                <fullName>Studying with ASD or other learning conditions</fullName>
+                <default>false</default>
+                <label>Studying with ASD or other learning conditions</label>
+            </value>
+            <value>
+                <fullName>They don’t know how to study effectively</fullName>
+                <default>false</default>
+                <label>They don’t know how to study effectively</label>
+            </value>
+            <value>
+                <fullName>ADHD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ADHD</label>
+            </value>
+            <value>
+                <fullName>Anxiety</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Anxiety</label>
+            </value>
+            <value>
+                <fullName>Aspirational Need</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aspirational Need</label>
+            </value>
+            <value>
+                <fullName>Disorganised</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Disorganised</label>
+            </value>
+            <value>
+                <fullName>Doesn&apos;t know how to study</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Doesn&apos;t know how to study</label>
+            </value>
+            <value>
+                <fullName>Exam Preparation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Exam Preparation</label>
+            </value>
+            <value>
+                <fullName>Focus</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Focus</label>
+            </value>
+            <value>
+                <fullName>Learning Disorder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Learning Disorder</label>
+            </value>
+            <value>
+                <fullName>Motivation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Motivation</label>
+            </value>
+            <value>
+                <fullName>Poor Marks</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Poor Marks</label>
+            </value>
+            <value>
+                <fullName>Student Wellbeing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Student Wellbeing</label>
+            </value>
+            <value>
+                <fullName>Time Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Time Management</label>
+            </value>
+            <value>
+                <fullName>Writing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Writing</label>
+            </value>
+            <value>
+                <fullName>Year 12 Proximity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Year 12 Proximity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
