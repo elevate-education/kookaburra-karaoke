@@ -1,65 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Thank_you_email_0_0</name>
-        <label>Thank you email</label>
-        <locationX>974</locationX>
-        <locationY>1163</locationY>
-        <actionName>GLSendEmail__SendEmail</actionName>
-        <actionType>apex</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>ContactorLeadID</name>
-            <value>
-                <elementReference>$Record.Candidate_Contact__r.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>EmailTemplateId</name>
-            <value>
-                <stringValue>00X5i000000l2rYEAQ</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>HtmlBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>OrgWideEmailAddress</name>
-            <value>
-                <stringValue>jobs@elevateeducation.com</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>RelatedToId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>SaveAsActivity</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>subject</name>
-            <value>
-                <stringValue>Thank you for your application</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>ToAddresses</name>
-            <value>
-                <elementReference>$Record.Candidate__r.Email__c</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>GLSendEmail__SendEmail</nameSegment>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
-    <actionCalls>
         <name>Thank_you_email_NY</name>
         <label>Thank you email</label>
         <locationX>3614</locationX>
@@ -148,124 +89,6 @@
             <name>OrgWideEmailAddress</name>
             <value>
                 <stringValue>recruitment@elevateeducation.com</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>RelatedToId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>SaveAsActivity</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>subject</name>
-            <value>
-                <stringValue>Thank you for your application</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>ToAddresses</name>
-            <value>
-                <elementReference>$Record.Candidate__r.Email__c</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>GLSendEmail__SendEmail</nameSegment>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
-    <actionCalls>
-        <name>UK_Coach_Thank_you_email</name>
-        <label>Thank you email</label>
-        <locationX>1766</locationX>
-        <locationY>1163</locationY>
-        <actionName>GLSendEmail__SendEmail</actionName>
-        <actionType>apex</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>ContactorLeadID</name>
-            <value>
-                <elementReference>$Record.Candidate_Contact__r.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>EmailTemplateId</name>
-            <value>
-                <stringValue>00XI8000000M07MMAS</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>HtmlBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>OrgWideEmailAddress</name>
-            <value>
-                <stringValue>recruitment@elevateeducation.com</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>RelatedToId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>SaveAsActivity</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>subject</name>
-            <value>
-                <stringValue>Thank you for your application</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>ToAddresses</name>
-            <value>
-                <elementReference>$Record.Candidate__r.Email__c</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>GLSendEmail__SendEmail</nameSegment>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
-    <actionCalls>
-        <name>ZA_Thank_you_email</name>
-        <label>Thank you email</label>
-        <locationX>2822</locationX>
-        <locationY>1163</locationY>
-        <actionName>GLSendEmail__SendEmail</actionName>
-        <actionType>apex</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>ContactorLeadID</name>
-            <value>
-                <elementReference>$Record.Candidate_Contact__r.Id</elementReference>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>EmailTemplateId</name>
-            <value>
-                <stringValue>00XI8000000M0apMAC</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>HtmlBody</name>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>OrgWideEmailAddress</name>
-            <value>
-                <stringValue>work@elevateeducation.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -464,9 +287,6 @@
                     <stringValue>Coach</stringValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>Thank_you_email_0_0</targetReference>
-            </connector>
             <label>Coach</label>
         </rules>
     </decisions>
@@ -535,9 +355,6 @@
                     <stringValue>Coach</stringValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>UK_Coach_Thank_you_email</targetReference>
-            </connector>
             <label>Coach</label>
         </rules>
     </decisions>
@@ -546,9 +363,6 @@
         <label>Check Position</label>
         <locationX>2558</locationX>
         <locationY>1055</locationY>
-        <defaultConnector>
-            <targetReference>ZA_Thank_you_email</targetReference>
-        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Connect_ZA</name>
