@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Anxiety or mental wellbeing</fullName>
+        <default>false</default>
+        <label>Anxiety or mental wellbeing</label>
+    </customValue>
+    <customValue>
+        <fullName>Lack of motivation</fullName>
+        <default>false</default>
+        <label>Lack of motivation</label>
+    </customValue>
+    <customValue>
+        <fullName>My child is doing well but I’d like to see them do even better</fullName>
+        <default>false</default>
+        <label>My child is doing well but I’d like to see them do even better</label>
+    </customValue>
+    <customValue>
+        <fullName>No concerns</fullName>
+        <default>false</default>
+        <label>No concerns</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Poor marks or exam performance</fullName>
+        <default>false</default>
+        <label>Poor marks or exam performance</label>
+    </customValue>
+    <customValue>
+        <fullName>Poor organisation and time management</fullName>
+        <default>false</default>
+        <label>Poor organisation and time management</label>
+    </customValue>
+    <customValue>
+        <fullName>Studying with ADHD</fullName>
+        <default>false</default>
+        <label>Studying with ADHD</label>
+    </customValue>
+    <customValue>
+        <fullName>Studying with ASD or other learning conditions</fullName>
+        <default>false</default>
+        <label>Studying with ASD or other learning conditions</label>
+    </customValue>
+    <customValue>
+        <fullName>They don’t know how to study effectively</fullName>
+        <default>false</default>
+        <label>They don’t know how to study effectively</label>
+    </customValue>
+    <customValue>
+        <fullName>Anxiety</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Anxiety</label>
+    </customValue>
+    <customValue>
+        <fullName>Writing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Writing</label>
+    </customValue>
+    <customValue>
+        <fullName>Aspirational Need</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Aspirational Need</label>
+    </customValue>
+    <customValue>
+        <fullName>Focus</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Focus</label>
+    </customValue>
+    <customValue>
+        <fullName>Exam Preparation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Exam Preparation</label>
+    </customValue>
+    <customValue>
+        <fullName>Learning Disorder</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Learning Disorder</label>
+    </customValue>
+    <customValue>
+        <fullName>Poor Marks</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Poor Marks</label>
+    </customValue>
+    <customValue>
+        <fullName>Student Wellbeing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Student Wellbeing</label>
+    </customValue>
+    <customValue>
+        <fullName>Year 12 Proximity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Year 12 Proximity</label>
+    </customValue>
+    <customValue>
+        <fullName>Disorganised</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Disorganised</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Management</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Time Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Doesn&apos;t know how to study</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Doesn&apos;t know how to study</label>
+    </customValue>
+    <customValue>
+        <fullName>ADHD</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ADHD</label>
+    </customValue>
+    <customValue>
+        <fullName>Motivation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Motivation</label>
+    </customValue>
+    <masterLabel>Buyer Need</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

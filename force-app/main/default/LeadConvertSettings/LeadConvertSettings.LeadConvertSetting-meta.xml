@@ -48,6 +48,10 @@
             <outputField>Business_Unit_2__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>b2c_Buyer_Need__c</inputField>
+            <outputField>Buyer_Need__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>cura_UserID__c</inputField>
             <outputField>Cura_User_ID__c</outputField>
         </mappingFields>

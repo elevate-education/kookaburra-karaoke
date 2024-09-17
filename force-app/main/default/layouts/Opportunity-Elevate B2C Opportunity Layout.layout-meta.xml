@@ -3,6 +3,7 @@
     <customButtons>Clone</customButtons>
     <customButtons>Attach_Files</customButtons>
     <excludeButtons>Clone</excludeButtons>
+    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -206,6 +207,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>LeadSource</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Buyer_Need__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -560,7 +565,7 @@
         <fields>Skill__c</fields>
         <fields>CREATED_DATE</fields>
         <relatedList>Session__c.Opportunity__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
+        <sortField>NAME</sortField>
         <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
