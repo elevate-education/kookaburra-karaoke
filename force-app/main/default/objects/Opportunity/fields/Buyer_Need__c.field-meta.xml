@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buyer_Need__c</fullName>
+    <description>Needs of the student that have prompted the parent to reach out</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Needs of the student that have prompted the parent to reach out</inlineHelpText>
+    <label>Buyer Need</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Buyer_Need</valueSetName>
+    </valueSet>
+</CustomField>
