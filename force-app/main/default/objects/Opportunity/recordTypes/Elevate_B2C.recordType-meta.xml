@@ -45,6 +45,49 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Buyer_Need__c</picklist>
+        <values>
+            <fullName>Anxiety or mental wellbeing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of motivation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My child is doing well but I%E2%80%99d like to see them do even better</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No concerns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor marks or exam performance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor organisation and time management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Studying with ADHD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Studying with ASD or other learning conditions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>They don%E2%80%99t know how to study effectively</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Diagnostic_Not_Run_Reason__c</picklist>
         <values>
             <fullName>Cancelled by Parent</fullName>
