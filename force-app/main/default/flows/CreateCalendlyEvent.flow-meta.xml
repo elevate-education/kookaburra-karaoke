@@ -1069,7 +1069,8 @@ So there&apos;s no path forward if the profile is not found.</description>
             <label>b2c South Africa</label>
         </rules>
     </decisions>
-    <description>Updated to include new AUS B2C round robin;
+    <description>Updated to include AU B2C calendly question order;
+Updated to include new AUS B2C round robin;
 Updated to include mobile phone number for ZA B2C;
 Added &apos;dylan.nedft@elevateeducation.com&apos; for ZA B2C;
 Updated logic for changing application status based on product family;
@@ -1210,7 +1211,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Student_s_School_b2c__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse6__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse4__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1222,13 +1223,13 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Year_Level__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse4__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse3__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>b2c_Student_Name__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse3__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse6__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1370,7 +1371,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Description</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse4__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse5__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1430,7 +1431,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>Student_s_School_b2c__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse5__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse4__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1448,7 +1449,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>b2c_Student_Name__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse2__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse6__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
