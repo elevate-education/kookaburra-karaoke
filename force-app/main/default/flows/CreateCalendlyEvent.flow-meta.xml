@@ -1401,13 +1401,13 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <inputAssignments>
             <field>MobilePhone</field>
             <value>
-                <elementReference>$Record.Calendly__Location__c</elementReference>
+                <elementReference>$Record.Calendly__CustomQuestion1__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
             <field>Notes__c</field>
             <value>
-                <elementReference>$Record.Calendly__CustomResponse1__c</elementReference>
+                <elementReference>$Record.Calendly__CustomResponse2__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2943,7 +2943,7 @@ Creates event (activity) based on Calendly Events (Elevate&apos;s custom flow, b
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <description>Campaign Id for the Webinar</description>
         <name>CampaignId</name>
