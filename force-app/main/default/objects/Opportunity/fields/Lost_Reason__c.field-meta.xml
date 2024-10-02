@@ -24,6 +24,11 @@
                 <label>Competitor</label>
             </value>
             <value>
+                <fullName>Diagnostic No Show</fullName>
+                <default>false</default>
+                <label>Diagnostic No Show</label>
+            </value>
+            <value>
                 <fullName>Do not see the value</fullName>
                 <default>false</default>
                 <label>Do not see the value</label>
