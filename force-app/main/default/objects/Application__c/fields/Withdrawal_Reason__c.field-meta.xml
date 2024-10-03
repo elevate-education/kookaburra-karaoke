@@ -48,6 +48,11 @@
                 <label>Could not commit to training</label>
             </value>
             <value>
+                <fullName>Not currently hiring / No available positions</fullName>
+                <default>false</default>
+                <label>Not currently hiring / No available positions</label>
+            </value>
+            <value>
                 <fullName>Other</fullName>
                 <default>false</default>
                 <label>Other</label>
