@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <description>In ZA, when a candidate is successfully screened, and passed GIA, they receive Book your own Final Interview email before progressing to an Interview.</description>
+        <name>Book_yourown_Final_Interview_email</name>
+        <label>Book your Final Interview email</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <actionName>GLSendEmail__SendEmail</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>ContactorLeadID</name>
+            <value>
+                <elementReference>$Record.Candidate_Contact__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>EmailTemplateId</name>
+            <value>
+                <stringValue>00XI8000000M0n5MAC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>HtmlBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OrgWideEmailAddress</name>
+            <value>
+                <stringValue>work@elevateeducation.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RelatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>SaveAsActivity</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subject</name>
+            <value>
+                <stringValue>Well done! Book your final interview for Elevate Education</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ToAddresses</name>
+            <value>
+                <elementReference>$Record.Candidate__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>GLSendEmail__SendEmail</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>In ZA, when a candidate is successfully screened, they receive GIA invite before progressing to an Interview.</description>
+        <name>Next_steps_GIA_email</name>
+        <label>Next steps - GIA email</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <actionName>GLSendEmail__SendEmail</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>ContactorLeadID</name>
+            <value>
+                <elementReference>$Record.Candidate_Contact__r.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>EmailTemplateId</name>
+            <value>
+                <stringValue>00XI8000000M0n0MAC</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>HtmlBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>OrgWideEmailAddress</name>
+            <value>
+                <stringValue>work@elevateeducation.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>RelatedToId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>SaveAsActivity</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>subject</name>
+            <value>
+                <stringValue>Next Steps - GIA for your Elevate Education job application</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ToAddresses</name>
+            <value>
+                <elementReference>$Record.Candidate__r.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>GLSendEmail__SendEmail</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Thank_you_email_NY</name>
         <label>Thank you email</label>
-        <locationX>3614</locationX>
+        <locationX>4186</locationX>
         <locationY>1163</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
@@ -62,7 +182,7 @@
     <actionCalls>
         <name>Thank_you_UK_0</name>
         <label>Thank you email</label>
-        <locationX>1502</locationX>
+        <locationX>2074</locationX>
         <locationY>1163</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
@@ -122,7 +242,7 @@
     <decisions>
         <name>Application_created_or_updated</name>
         <label>Application created or updated</label>
-        <locationX>2360</locationX>
+        <locationX>2756</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -188,7 +308,7 @@
     <decisions>
         <name>Check_Business_Unit</name>
         <label>Check Business Unit</label>
-        <locationX>2426</locationX>
+        <locationX>2998</locationX>
         <locationY>947</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -262,7 +382,7 @@
     <decisions>
         <name>Check_Position</name>
         <label>Check Position</label>
-        <locationX>974</locationX>
+        <locationX>1546</locationX>
         <locationY>1055</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -293,7 +413,7 @@
     <decisions>
         <name>Check_Position_NY</name>
         <label>Check Position</label>
-        <locationX>3350</locationX>
+        <locationX>3922</locationX>
         <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Thank_you_email_NY</targetReference>
@@ -327,7 +447,7 @@
     <decisions>
         <name>Check_Position_UK</name>
         <label>Check Position</label>
-        <locationX>1766</locationX>
+        <locationX>2338</locationX>
         <locationY>1055</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -361,7 +481,7 @@
     <decisions>
         <name>Check_Position_ZA</name>
         <label>Check Position</label>
-        <locationX>2558</locationX>
+        <locationX>3130</locationX>
         <locationY>1055</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -392,7 +512,7 @@
     <decisions>
         <name>Closed</name>
         <label>Application status</label>
-        <locationX>50</locationX>
+        <locationX>270</locationX>
         <locationY>431</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -444,6 +564,45 @@
             <label>On Hold</label>
         </rules>
         <rules>
+            <name>Successfully_Screened_ZA</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Screened</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Next_steps_GIA_email</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Successfully Screened &amp; ZA</label>
+        </rules>
+        <rules>
+            <name>Passed_GIA_SA_only</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.GIA_status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pass</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Confirm_if_ZA_and_successfully_screened</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Passed GIA (ZA only)</label>
+        </rules>
+        <rules>
             <name>Passed_GIA_ZA_only</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
@@ -468,9 +627,38 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Confirm_if_ZA_and_successfully_screened</name>
+        <label>Confirm if ZA and successfully screened</label>
+        <locationX>446</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_GIA_Pass</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Business_Unit__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Elevate South Africa</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Screened</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Book_yourown_Final_Interview_email</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Contact_record_exists</name>
         <label>Contact record exists?</label>
-        <locationX>4274</locationX>
+        <locationX>4846</locationX>
         <locationY>539</locationY>
         <defaultConnector>
             <targetReference>Create_Contact_from_application</targetReference>
@@ -495,7 +683,7 @@
     <decisions>
         <name>Existing_contact_0</name>
         <label>Existing contact</label>
-        <locationX>2426</locationX>
+        <locationX>2998</locationX>
         <locationY>539</locationY>
         <defaultConnector>
             <targetReference>Create_Contact_for_Candi</targetReference>
@@ -517,7 +705,8 @@
             <label>Yes</label>
         </rules>
     </decisions>
-    <description>AUS Connect only: Flow modified to accommodate &apos;Book Your Own Screening Call&apos;;
+    <description>Merge flow version 54 with current version;
+AUS Connect only: Flow modified to accommodate &apos;Book Your Own Screening Call&apos;;
 AUS only: Flow modified to accommodate &apos;Elevate AUS Coaching&apos; BU;
 UK only: Automated &apos;Thank you&apos; email removed. Job application form will redirect applicants towards &apos;Book your own screening call&apos; calendly link instead. (Replicating AUS)</description>
     <environments>Default</environments>
@@ -563,7 +752,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
         <description>For No Call Applications, A Lead is created for the candidate in Salesforce (and linked to the Application)</description>
         <name>Create_Contact_for_Candi</name>
         <label>Create Contact for Candidate</label>
-        <locationX>2558</locationX>
+        <locationX>3130</locationX>
         <locationY>647</locationY>
         <connector>
             <targetReference>Update_Application_with_Contact_created_above_0</targetReference>
@@ -604,7 +793,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordCreates>
         <name>Create_Contact_from_application</name>
         <label>Create Contact from application</label>
-        <locationX>4406</locationX>
+        <locationX>4978</locationX>
         <locationY>647</locationY>
         <connector>
             <targetReference>Update_application_with_above_contact</targetReference>
@@ -645,7 +834,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordLookups>
         <name>Candi_Contact</name>
         <label>Candidate Contact</label>
-        <locationX>2426</locationX>
+        <locationX>2998</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -667,7 +856,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
         <description>Get contact records that match candidate email</description>
         <name>Get_Contacts</name>
         <label>Get Contacts</label>
-        <locationX>4274</locationX>
+        <locationX>4846</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -688,7 +877,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordUpdates>
         <name>Update_application_with_above_contact</name>
         <label>Update application with above contact</label>
-        <locationX>4406</locationX>
+        <locationX>4978</locationX>
         <locationY>755</locationY>
         <inputAssignments>
             <field>Candidate_Contact__c</field>
@@ -707,7 +896,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordUpdates>
         <name>Update_Application_with_Contact_created_above_0</name>
         <label>Update Application with Contact created above</label>
-        <locationX>2558</locationX>
+        <locationX>3130</locationX>
         <locationY>755</locationY>
         <connector>
             <targetReference>Check_Business_Unit</targetReference>
@@ -723,7 +912,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordUpdates>
         <name>Update_Application_with_Contact_created_above_0_0</name>
         <label>Update Application with Contact created above</label>
-        <locationX>2294</locationX>
+        <locationX>2866</locationX>
         <locationY>647</locationY>
         <connector>
             <targetReference>Check_Business_Unit</targetReference>
@@ -739,8 +928,8 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordUpdates>
         <name>Update_Closed_date_on_Application</name>
         <label>Update Closed date on Application</label>
-        <locationX>50</locationX>
-        <locationY>947</locationY>
+        <locationX>270</locationX>
+        <locationY>1139</locationY>
         <inputAssignments>
             <field>Application_closed_date__c</field>
             <value>
@@ -752,7 +941,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordUpdates>
         <name>Update_contact_in_application</name>
         <label>Update contact in application</label>
-        <locationX>4142</locationX>
+        <locationX>4714</locationX>
         <locationY>647</locationY>
         <inputAssignments>
             <field>Candidate_Contact__c</field>
@@ -771,8 +960,8 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
     <recordUpdates>
         <name>Update_Penultimate_Status</name>
         <label>Update Penultimate Status</label>
-        <locationX>50</locationX>
-        <locationY>839</locationY>
+        <locationX>270</locationX>
+        <locationY>1031</locationY>
         <connector>
             <targetReference>Update_Closed_date_on_Application</targetReference>
         </connector>
@@ -788,7 +977,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
         <description>If candidate fails GIA after final Interview, application is moved to &apos;Not Hired&apos; and Outcome &apos;Unsuccessful&apos;</description>
         <name>Update_Status_and_Outcome</name>
         <label>Update Status and Outcome</label>
-        <locationX>182</locationX>
+        <locationX>754</locationX>
         <locationY>539</locationY>
         <inputAssignments>
             <field>Outcome__c</field>
@@ -805,7 +994,7 @@ IF(TEXT({!$Record.Business_Unit__c})=&quot;Elevate UK&quot;, &quot;001I8000002X2
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>2234</locationX>
+        <locationX>2630</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Application_created_or_updated</targetReference>
