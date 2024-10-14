@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Line__c</fullName>
+    <description>Used in all sales reports</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+OR(Product_Family__c = &quot;Seminar&quot;, Product_Family__c =&quot;Elevate Online&quot;, Product_Family__c = &quot;Misc&quot;, Product_Family__c = &quot;Webinar&quot;),&quot;Study Skills&quot;,
+Product_Family__c
+)</formula>
+    <label>Product Line</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
