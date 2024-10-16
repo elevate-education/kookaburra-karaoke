@@ -40,7 +40,6 @@ OR(TEXT(Police_check__c) = &apos;Completed&apos;, TEXT(Police_check__c) = &apos;
 
 OR(Presenter_Policy__c = TRUE,  Contact_Exchange_Consent__c = TRUE),
 Code_of_Conduct__c = TRUE,
-Casual_Employment_Statement__c = TRUE, 
 Fair_Work_Information_Statement__c = TRUE
 ),
 &apos;Completed&apos;, 
@@ -58,7 +57,6 @@ OR(TEXT(Police_check__c) = &apos;Completed&apos;, TEXT(Police_check__c) = &apos;
 
 OR(Presenter_Policy__c = TRUE, Contact_Exchange_Consent__c = TRUE),
 Code_of_Conduct__c = TRUE,
-Casual_Employment_Statement__c = TRUE, 
 Fair_Work_Information_Statement__c = TRUE,
 Child_Safety_Code_of_Conduct__c  = TRUE
 ),
