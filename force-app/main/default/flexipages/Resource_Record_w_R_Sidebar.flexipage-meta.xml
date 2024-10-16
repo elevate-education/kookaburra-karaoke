@@ -701,16 +701,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Casual_Employment_Statement__c</fieldItem>
-                <identifier>RecordCasual_Employment_Statement_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Fair_Work_Information_Statement__c</fieldItem>
                 <identifier>RecordFair_Work_Information_Statement_cField</identifier>
             </fieldInstance>
