@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Coach__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The coach that ran the session this feedback is related to</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The coach that ran the session this feedback is related to</inlineHelpText>
+    <label>Coach</label>
+    <referenceTo>sked__Resource__c</referenceTo>
+    <relationshipLabel>B2C feedbacks</relationshipLabel>
+    <relationshipName>B2C_feedbacks</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
